@@ -1,0 +1,115 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{listings}
+
+\usepackage{color}
+\definecolor{grassy}{RGB}{0, 130, 0}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{lightgray3}{gray}{0.95}
+\definecolor{darkgreen}{rgb}{0.3,0.5,0.3}
+
+\lstdefinelanguage{grassgis}{%
+morekeywords={g.cairocomp,g.copy,g.dirseps,g.filename,g.findetc,g.findfile,g.gisenv,g.gui,g.list,g.mapset,g.mapsets,g.message,g.mkfontcap,g.mlist,g.mremove,g.parser,g.pnmcat,g.pnmcomp,g.ppmtopng,g.proj,g.region,g.remove,g.rename,g.setproj,g.tempfile,g.version,r.basins.fill,r.bitpattern,r.buffer,r.carve,r.category,r.circle,r.clump,r.coin,r.colors,r.colors.out,r.composite,r.compress,r.contour,r.cost,r.covar,r.cross,r.describe,r.digit,r.distance,r.drain,r.external,r.external.out,r.fill.dir,r.flow,r.grow,r.grow.distance,r.gwflow,r.his,r.horizon,r.in.arc,r.in.ascii,r.in.bin,r.info,r.in.gdal,r.in.gridatb,r.in.lidar,r.in.mat,r.in.png,r.in.poly,r.in.xyz,r.kappa,r.lake,r.le,r.li,r.los,r.mapcalc,r.mfilter,r.mode,r.neighbors,r.null,r.out.arc,r.out.ascii,r.out.bin,r.out.gdal,r.out.gridatb,r.out.mat,r.out.mpeg,r.out.png,r.out.pov,r.out.ppm,r.out.ppm3,r.out.tiff,r.out.vrml,r.out.vtk,r.param.scale,r.patch,r.profile,r.proj,r.quant,r.quantile,r.random,r.random.cells,r.random.surface,r.reclass,r.recode,r.region,r.regression.line,r.report,r.resamp.bspline,r.resamp.filter,r.resamp.interp,r.resample,r.resamp.rst,r.resamp.stats,r.rescale,r.rescale.eq,r.ros,r.series,r.series.interp,r.shaded.relief2,r.slope.aspect,r.solute.transport,r.spread,r.spreadpath,r.statistics,r.statistics2,r.statistics3,r.stats,r.sun,r.sunmask,r.support,r.support.stats,r.surf.area,r.surf.contour,r.surf.fractal,r.surf.gauss,r.surf.idw,r.surf.idw2,r.surf.random,r.terraflow,r.texture,r.thin,r.timestamp,r.topidx,r.topmodel,r.to.rast3,r.to.rast3elev,r.to.vect,r.transect,r.univar,r.uslek,r.usler,r.viewshed,r.volume,r.walk,r.water.outlet,r.watershed,r.what,r.what.color,v.buffer,v.build,v.build.polylines,v.category,v.class,v.clean,v.colors,v.colors.out,v.convert,v.db.connect,v.db.select,v.delaunay,v.distance,v.drape,v.edit,v.external,v.external.out,v.extract,v.extrude,v.generalize,v.hull,v.in.ascii,v.in.db,v.in.dwg,v.in.dxf,v.info,v.in.lidar,v.in.ogr,v.in.region,v.in.sites,v.kcv,v.kernel,v.label,v.label.sa,v.lidar.correction,v.lidar.edgedetection,v.lidar.growing,v.lrs,v.mapcalc,v.mkgrid,v.neighbors,v.net,v.net.alloc,v.net.allpairs,v.net.bridge,v.net.centrality,v.net.components,v.net.connectivity,v.net.distance,v.net.flow,v.net.iso,v.net.path,v.net.salesman,v.net.spanningtree,v.net.steiner,v.net.timetable,v.net.visibility,v.normal,v.out.ascii,v.out.dxf,v.outlier,v.out.ogr,v.out.postgis,v.out.pov,v.out.svg,v.out.vtk,v.overlay,v.parallel,v.patch,v.perturb,v.proj,v.qcount,v.random,v.reclass,v.rectify,v.sample,v.segment,v.select,v.split,v.support,v.surf.bspline,v.surf.idw,v.surf.rst,v.timestamp,v.to.3d,v.to.db,v.to.points,v.to.rast,v.to.rast3,v.transform,v.type,v.univar,v.vect.stats,v.vol.rst,v.voronoi,v.what,v.what.rast,v.what.rast3,m.cogo,m.measure,m.nviz.image,m.nviz.script,m.transform}
+}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "alsoletter={*()&quot;'0123456789.},alsoother={\{\=\}},backgroundcolor={\color{lightgray3}},commentstyle={\itshape\color{lightgray}},fillcolor={\color{red}},frame=l,framexleftmargin=1em,framextopmargin=1em,keywordstyle={\color{grassy}\bfseries},language=grassgis,literate={{=}{{{\color{blue}=}}}1},morecomment={[n][\keywordstyle]{{}{}}},prebreak={\textbackslash},sensitive=true"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+GRASS GIS modules
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily},breaklines=true,language=grassgis,numbers=left,numberstyle={\tiny},stepnumber=1,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# general
+\end_layout
+
+\begin_layout Plain Layout
+
+g.access, g.cairocomp, g.copy, g.dirseps, g.filename, g.findetc, g.findfile, g.gisenv,
+ g.gui, g.list, g.mapset, g.mapsets, g.message, g.mkfontcap, g.mlist, g.mremove,
+ g.parser, g.pnmcat, g.pnmcomp, g.ppmtopng, g.proj, g.region, g.remove, g.rename,
+ g.setproj, g.tempfile, g.version
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
