@@ -4,6 +4,7 @@
 \begin_header
 \textclass tufte-handout
 \begin_preamble
+% Colors
 \usepackage{xcolor}
 \definecolor{darkgreen}{rgb}{0,0.4,0}
 \definecolor{grassy}{RGB}{0, 130, 0}
@@ -11,15 +12,16 @@
 \definecolor{lightgray3}{gray}{0.95}
 \definecolor{darkgreen}{rgb}{0.3,0.5,0.3}
 
-% listings require textcomp (?)
-\usepackage{textcomp}
+% Code listings
+\usepackage{textcomp}% listings require textcomp
 \usepackage{listings}
 
 % htt <-- what is this?
 %\usepackage[htt]{hyphenat}
 %\usepackage[htt]{listings} % this causes error(s)?
 
-\AtBeginDocument{
+\AtBeginDocument{% Beginning of AtBegin --->
+
 % "define" grassgis
 \lstdefinelanguage{grassgis}{
 alsoletter=-.,
@@ -32,37 +34,53 @@ sensitive=true,
 morestring=[b]"}
 
 % Default settings for code listings
+%  morecomment={[n][\keywordstyle]{{}{}}},
 \lstset{
-backgroundcolor={\color{lightgray3}},
-commentstyle={\itshape\color{lightgray}},
-fillcolor=\color{grassy},
-frame=l,
-framexleftmargin=0em,
-framexrightmargin=0em,
-framextopmargin=1em,
-framerule=0em,
-language=grassgis,
 aboveskip=3mm,
 belowskip=3mm,
-showstringspaces=false,
-columns=flexible,
+%
+backgroundcolor={\color{lightgray3}},
 basicstyle={\small\ttfamily},
+%
+breaklines=true,
+prebreak={\textbackslash},
+%
+columns=fullflexible,
+%
+fillcolor=\color{grassy},
+frame=l,
+framexleftmargin=1em,
+framexrightmargin=0em,
+framextopmargin=1em,
+framexbottommargin=1em,
+framerule=0em,
+%
+language=grassgis,
+literate={{=}{{{\color{red}=}}}1},
+commentstyle={\itshape\color{lightgray}},
+stringstyle=color{orange},
 keywordstyle=[1]\bfseries\color{grassy},
 keywordstyle=[2]\color{red},
 keywordstyle=[3]\color{darkgreen},
-keywordstyle=[4]\color{grassy},
-commentstyle=\color{blue},
-stringstyle=\color{orange},
-upquote=true,
-showtabs=true,
-tab=BADTAB,
+keywordstyle=[4]\color{magenta},
+%
 numbers=left,
 numberstyle=\tiny\ttfamily,
-breaklines=true}
+numbersep=3em,
+%
+keepspaces=true,
+showstringspaces=false,
+%
+tab=BADTAB,
+showtabs=true,
+%
+upquote=true,
+}
 
 \renewcommand{\lstlistlistingname}{List of Listings}% Fix the List of Listings title
 
-}
+}% End of AtBegin <---
+
 
 % Be less rigorous with line breaking
 \sloppy
@@ -77,12 +95,12 @@ logicalmkup
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman GFS Neohellenic
+\font_roman default
 \font_sans default
-\font_typewriter Monaco
+\font_typewriter default
 \font_math auto
 \font_default_family default
-\use_non_tex_fonts true
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -1195,7 +1213,7 @@ r.li.edgedensity Calculates edge density index on a raster map, using a 4
 \end_layout
 
 \begin_layout Description
-r.li 
+r.li
 \end_layout
 
 \begin_layout Description
