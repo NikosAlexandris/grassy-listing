@@ -58,7 +58,7 @@ framerule=0em,
 language=grassgis,
 literate={{=}{{{\color{red}=}}}1},
 commentstyle={\itshape\color{lightgray}},
-stringstyle=color{orange},
+stringstyle=\color{orange},
 keywordstyle=[1]\bfseries\color{grassy},
 keywordstyle=[2]\color{red},
 keywordstyle=[3]\color{darkgreen},
@@ -2542,8 +2542,947 @@ v.what.rast3 Uploads 3D raster values at positions of vector points to the
 v.what.vect Uploads vector values at positions of vector points to the table.
 \end_layout
 
+\begin_layout Standard
+Add-Ons
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for D in *; do echo "${D}" |tr "
+\backslash
+n" "|" && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description:
+ //g'; don
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d.correlate|
+\end_layout
+
+\begin_layout Standard
+Prints a graph of the correlation between raster maps (in pairs).
+\end_layout
+
+\begin_layout Standard
+d.out.file|
+\end_layout
+
+\begin_layout Standard
+Saves the contents of the active display monitor to a graphics file.
+\end_layout
+
+\begin_layout Standard
+d.polar|d.rast.edit|
+\end_layout
+
+\begin_layout Standard
+Edits cell values in a raster map.
+\end_layout
+
+\begin_layout Standard
+d.rast.leg|
+\end_layout
+
+\begin_layout Standard
+Displays a raster map and its legend on a graphics window
+\end_layout
+
+\begin_layout Standard
+d.redraw|
+\end_layout
+
+\begin_layout Standard
+Redraws the content of currently selected monitor.
+\end_layout
+
+\begin_layout Standard
+d.shadedmap|
+\end_layout
+
+\begin_layout Standard
+Drapes a color raster over a shaded relief map.
+\end_layout
+
+\begin_layout Standard
+d.to.rast|
+\end_layout
+
+\begin_layout Standard
+Saves the contents of the active display monitor to a raster map.
+\end_layout
+
+\begin_layout Standard
+d.vect.thematic|
+\end_layout
+
+\begin_layout Standard
+Displays thematic vector map
+\end_layout
+
+\begin_layout Standard
+d.what.rast|
+\end_layout
+
+\begin_layout Standard
+Allows the user to interactively query raster map layers at user-selected
+ locations.
+\end_layout
+
+\begin_layout Standard
+d.what.vect|
+\end_layout
+
+\begin_layout Standard
+Allows the user to interactively query vector map layers at user-selected
+ locations.
+\end_layout
+
+\begin_layout Standard
+db.dropcolumn|
+\end_layout
+
+\begin_layout Standard
+Drops a column from selected attribute table.
+\end_layout
+
+\begin_layout Standard
+db.droptable|
+\end_layout
+
+\begin_layout Standard
+Drops an attribute table.
+\end_layout
+
+\begin_layout Standard
+db.in.ogr|db.out.ogr|
+\end_layout
+
+\begin_layout Standard
+Exports attribute tables into various formats.
+\end_layout
+
+\begin_layout Standard
+db.test|
+\end_layout
+
+\begin_layout Standard
+Test database driver, database must exist and set by db.connect.
+\end_layout
+
+\begin_layout Standard
+db.univar|
+\end_layout
+
+\begin_layout Standard
+Calculates univariate statistics on selected table column.
+\end_layout
+
+\begin_layout Standard
+g.extension|
+\end_layout
+
+\begin_layout Standard
+#% label: Maintains GRASS Addons extensions in local GRASS installation.
+\end_layout
+
+\begin_layout Standard
+g.extension.all|
+\end_layout
+
+\begin_layout Standard
+#% label: Rebuilds or removes all locally installed GRASS Addons extensions.
+\end_layout
+
+\begin_layout Standard
+g.gui.animation|
+\end_layout
+
+\begin_layout Standard
+Tool for animating a series of raster and vector maps or a space time raster
+ or vector dataset.
+\end_layout
+
+\begin_layout Standard
+g.gui.dbmgr|
+\end_layout
+
+\begin_layout Standard
+Launches graphical attribute table manager.
+\end_layout
+
+\begin_layout Standard
+g.gui.gcp|
+\end_layout
+
+\begin_layout Standard
+Georectifies a map and allows to manage Ground Control Points.
+\end_layout
+
+\begin_layout Standard
+g.gui.gmodeler|
+\end_layout
+
+\begin_layout Standard
+#% label: Graphical Modeler.
+\end_layout
+
+\begin_layout Standard
+g.gui.iclass|
+\end_layout
+
+\begin_layout Standard
+#% label: Tool for supervised classification of imagery data.
+\end_layout
+
+\begin_layout Standard
+g.gui.mapswipe|
+\end_layout
+
+\begin_layout Standard
+Interactively compares two maps by swiping a visibility bar.
+\end_layout
+
+\begin_layout Standard
+g.gui.psmap|
+\end_layout
+
+\begin_layout Standard
+Tool for creating hardcopy map outputs.
+\end_layout
+
+\begin_layout Standard
+g.gui.rlisetup|
+\end_layout
+
+\begin_layout Standard
+Configuration tool for r.li modules.
+\end_layout
+
+\begin_layout Standard
+g.gui.timeline|
+\end_layout
+
+\begin_layout Standard
+Allows to compare temporal datasets by displaying their temporal extents
+ in a plot.
+\end_layout
+
+\begin_layout Standard
+g.gui.vdigit|
+\end_layout
+
+\begin_layout Standard
+Interactive editing and digitization of vector maps.
+\end_layout
+
+\begin_layout Standard
+g.manual|
+\end_layout
+
+\begin_layout Standard
+Displays the manual pages of GRASS modules.
+\end_layout
+
+\begin_layout Standard
+i.colors.enhance|
+\end_layout
+
+\begin_layout Standard
+Performs auto-balancing of colors for RGB images.
+\end_layout
+
+\begin_layout Standard
+i.fusion.hpf|i.image.mosaic|
+\end_layout
+
+\begin_layout Standard
+Mosaics several images and extends colormap.
+\end_layout
+
+\begin_layout Standard
+i.in.spotvgt|
+\end_layout
+
+\begin_layout Standard
+Imports SPOT VGT NDVI data into a raster map.
+\end_layout
+
+\begin_layout Standard
+i.oif|i.pansharpen|i.spectral|i.tasscap|m.proj|
+\end_layout
+
+\begin_layout Standard
+Converts coordinates from one projection to another (cs2cs frontend).
+\end_layout
+
+\begin_layout Standard
+r.blend|
+\end_layout
+
+\begin_layout Standard
+Blends color components of two raster maps by a given ratio.
+\end_layout
+
+\begin_layout Standard
+r.buffer.lowmem|
+\end_layout
+
+\begin_layout Standard
+#% label: Creates a raster map showing buffer zones surrounding cells that
+ contain non-NULL category values.
+\end_layout
+
+\begin_layout Standard
+r.colors.stddev|
+\end_layout
+
+\begin_layout Standard
+Sets color rules based on stddev from a raster map's mean value.
+\end_layout
+
+\begin_layout Standard
+r.fillnulls|
+\end_layout
+
+\begin_layout Standard
+Fills no-data areas in raster maps using spline interpolation.
+\end_layout
+
+\begin_layout Standard
+r.grow|r.in.aster|r.in.srtm|r.in.wms|
+\end_layout
+
+\begin_layout Standard
+Downloads and imports data from WMS/WMTS/NASA OnEarth server.
+\end_layout
+
+\begin_layout Standard
+r.mask|
+\end_layout
+
+\begin_layout Standard
+Creates a MASK for limiting raster operation.
+\end_layout
+
+\begin_layout Standard
+r.out.xyz|
+\end_layout
+
+\begin_layout Standard
+Exports a raster map to a text file as x,y,z values based on cell centers.
+\end_layout
+
+\begin_layout Standard
+r.pack|
+\end_layout
+
+\begin_layout Standard
+Packs up a raster map and support files for copying.
+\end_layout
+
+\begin_layout Standard
+r.plane|
+\end_layout
+
+\begin_layout Standard
+Creates raster plane map given dip (inclination), aspect (azimuth) and one
+ point.
+\end_layout
+
+\begin_layout Standard
+r.reclass.area|
+\end_layout
+
+\begin_layout Standard
+Reclasses a raster map greater or less than user specified area size (in
+ hectares).
+\end_layout
+
+\begin_layout Standard
+r.rgb|
+\end_layout
+
+\begin_layout Standard
+Splits a raster map into red, green and blue maps.
+\end_layout
+
+\begin_layout Standard
+r.tileset|
+\end_layout
+
+\begin_layout Standard
+Produces tilings of the source projection for use in the destination region
+ and projection.
+\end_layout
+
+\begin_layout Standard
+r.unpack|
+\end_layout
+
+\begin_layout Standard
+Unpacks a raster map packed with r.pack.
+\end_layout
+
+\begin_layout Standard
+r3.in.xyz|t.create|
+\end_layout
+
+\begin_layout Standard
+Creates a space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.info|
+\end_layout
+
+\begin_layout Standard
+Lists information about space time datasets and maps.
+\end_layout
+
+\begin_layout Standard
+t.list|
+\end_layout
+
+\begin_layout Standard
+Lists space time datasets and maps registered in the temporal database.
+\end_layout
+
+\begin_layout Standard
+t.merge|
+\end_layout
+
+\begin_layout Standard
+Merges several space time datasets into a single space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.accdetect|
+\end_layout
+
+\begin_layout Standard
+Detects accumulation patterns in temporally accumulated space time raster
+ datasets created by t.rast.accumulate.
+\end_layout
+
+\begin_layout Standard
+t.rast.accumulate|
+\end_layout
+
+\begin_layout Standard
+Computes cyclic accumulations of a space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.aggregate|
+\end_layout
+
+\begin_layout Standard
+Aggregates temporally the maps of a space time raster dataset by a user
+ defined granularity.
+\end_layout
+
+\begin_layout Standard
+t.rast.aggregate.ds|
+\end_layout
+
+\begin_layout Standard
+Aggregates data of an existing space time raster dataset using the time
+ intervals of a second space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.colors|
+\end_layout
+
+\begin_layout Standard
+Creates/modifies the color table associated with each raster map of the
+ space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.export|
+\end_layout
+
+\begin_layout Standard
+Exports space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.extract|
+\end_layout
+
+\begin_layout Standard
+Extracts a subset of a space time raster datasets.
+\end_layout
+
+\begin_layout Standard
+t.rast.gapfill|
+\end_layout
+
+\begin_layout Standard
+Replaces gaps in a space time raster dataset with interpolated raster maps.
+\end_layout
+
+\begin_layout Standard
+t.rast.import|
+\end_layout
+
+\begin_layout Standard
+Imports space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.list|
+\end_layout
+
+\begin_layout Standard
+Lists registered maps of a space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.mapcalc|
+\end_layout
+
+\begin_layout Standard
+Performs spatio-temporal mapcalc expressions on temporally sampled maps
+ of space time raster datasets.
+\end_layout
+
+\begin_layout Standard
+t.rast.neighbors|
+\end_layout
+
+\begin_layout Standard
+Performs a neighborhood analysis for each map in a space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.out.vtk|
+\end_layout
+
+\begin_layout Standard
+Exports space time raster dataset as VTK time series.
+\end_layout
+
+\begin_layout Standard
+t.rast.series|
+\end_layout
+
+\begin_layout Standard
+Performs different aggregation algorithms from r.series on all or a subset
+ of raster maps in a space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast.to.rast3|
+\end_layout
+
+\begin_layout Standard
+Converts a space time raster dataset into a raster3d map.
+\end_layout
+
+\begin_layout Standard
+t.rast.univar|
+\end_layout
+
+\begin_layout Standard
+Calculates univariate statistics from the non-null cells for each registered
+ raster map of a space time raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast3d.extract|
+\end_layout
+
+\begin_layout Standard
+Extracts a subset of a space time 3D raster dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast3d.list|
+\end_layout
+
+\begin_layout Standard
+Lists registered maps of a space time raster3d dataset.
+\end_layout
+
+\begin_layout Standard
+t.rast3d.mapcalc|
+\end_layout
+
+\begin_layout Standard
+Performs r3.mapcalc expressions on maps of sampled space time 3D raster datasets.
+\end_layout
+
+\begin_layout Standard
+t.rast3d.univar|
+\end_layout
+
+\begin_layout Standard
+Calculates univariate statistics from the non-null cells for each registered
+ raster3d map of a space time raster3d dataset.
+\end_layout
+
+\begin_layout Standard
+t.register|
+\end_layout
+
+\begin_layout Standard
+Registers raster, vector and raster3d maps in a space time datasets.
+\end_layout
+
+\begin_layout Standard
+t.remove|
+\end_layout
+
+\begin_layout Standard
+Removes space time datasets from temporal database.
+\end_layout
+
+\begin_layout Standard
+t.rename|
+\end_layout
+
+\begin_layout Standard
+Renames a space time dataset
+\end_layout
+
+\begin_layout Standard
+t.sample|
+\end_layout
+
+\begin_layout Standard
+Samples the input space time dataset(s) with a sample space time dataset
+ and print the result to stdout.
+\end_layout
+
+\begin_layout Standard
+t.shift|
+\end_layout
+
+\begin_layout Standard
+Shifts temporally the maps of a space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.snap|
+\end_layout
+
+\begin_layout Standard
+Snaps temporally the maps of a space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.support|
+\end_layout
+
+\begin_layout Standard
+Modifies the metadata of a space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.topology|
+\end_layout
+
+\begin_layout Standard
+Lists temporal topology of a space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.unregister|
+\end_layout
+
+\begin_layout Standard
+Unregisters raster, vector and raster3d maps from the temporal database
+ or a specific space time dataset.
+\end_layout
+
+\begin_layout Standard
+t.vect.db.select|
+\end_layout
+
+\begin_layout Standard
+Prints attributes of vector maps registered in a space time vector dataset.
+\end_layout
+
+\begin_layout Standard
+t.vect.export|
+\end_layout
+
+\begin_layout Standard
+Exports a space time vector dataset as GRASS GIS specific archive file.
+\end_layout
+
+\begin_layout Standard
+t.vect.extract|
+\end_layout
+
+\begin_layout Standard
+Extracts a subset of a space time vector dataset.
+\end_layout
+
+\begin_layout Standard
+t.vect.import|
+\end_layout
+
+\begin_layout Standard
+Imports a space time vector dataset from a GRASS GIS specific archive file.
+\end_layout
+
+\begin_layout Standard
+t.vect.list|
+\end_layout
+
+\begin_layout Standard
+Lists registered maps of a space time vector dataset.
+\end_layout
+
+\begin_layout Standard
+t.vect.observe.strds|
+\end_layout
+
+\begin_layout Standard
+Observes specific locations in a space time raster dataset over a period
+ of time using vector points.
+\end_layout
+
+\begin_layout Standard
+t.vect.univar|
+\end_layout
+
+\begin_layout Standard
+Calculates univariate statistics of attributes for each registered vector
+ map of a space time vector dataset
+\end_layout
+
+\begin_layout Standard
+t.vect.what.strds|
+\end_layout
+
+\begin_layout Standard
+Stores raster map values at spatial and temporal positions of vector points
+ as vector attributes.
+\end_layout
+
+\begin_layout Standard
+v.build.all|
+\end_layout
+
+\begin_layout Standard
+Rebuilds topology on all vector maps in the current mapset.
+\end_layout
+
+\begin_layout Standard
+v.centroids|v.class.ml|v.convert.all|
+\end_layout
+
+\begin_layout Standard
+Converts all older versions of GRASS vector maps in current mapset to current
+ format.
+\end_layout
+
+\begin_layout Standard
+v.db.addcolumn|
+\end_layout
+
+\begin_layout Standard
+Adds one or more columns to the attribute table connected to a given vector
+ map.
+\end_layout
+
+\begin_layout Standard
+v.db.addtable|
+\end_layout
+
+\begin_layout Standard
+Creates and connects a new attribute table to a given layer of an existing
+ vector map.
+\end_layout
+
+\begin_layout Standard
+v.db.dropcolumn|
+\end_layout
+
+\begin_layout Standard
+Drops a column from the attribute table connected to a given vector map.
+\end_layout
+
+\begin_layout Standard
+v.db.droprow|
+\end_layout
+
+\begin_layout Standard
+Removes a vector feature from a vector map through attribute selection.
+\end_layout
+
+\begin_layout Standard
+v.db.droptable|v.db.join|
+\end_layout
+
+\begin_layout Standard
+Joins a database table to a vector map table.
+\end_layout
+
+\begin_layout Standard
+v.db.reconnect.all|
+\end_layout
+
+\begin_layout Standard
+Reconnects attribute tables for all vector maps from the current mapset
+ to a new database.
+\end_layout
+
+\begin_layout Standard
+v.db.renamecolumn|
+\end_layout
+
+\begin_layout Standard
+Renames a column in the attribute table connected to a given vector map.
+\end_layout
+
+\begin_layout Standard
+v.db.univar|
+\end_layout
+
+\begin_layout Standard
+Calculates univariate statistics on selected table column for a GRASS vector
+ map.
+\end_layout
+
+\begin_layout Standard
+v.db.update|
+\end_layout
+
+\begin_layout Standard
+Updates a column in the attribute table connected to a vector map.
+\end_layout
+
+\begin_layout Standard
+v.dissolve|
+\end_layout
+
+\begin_layout Standard
+Dissolves boundaries between adjacent areas sharing a common category number
+ or attribute.
+\end_layout
+
+\begin_layout Standard
+v.in.e00|
+\end_layout
+
+\begin_layout Standard
+Imports E00 file into a vector map.
+\end_layout
+
+\begin_layout Standard
+v.in.geonames|
+\end_layout
+
+\begin_layout Standard
+Imports geonames.org country files into a vector points map.
+\end_layout
+
+\begin_layout Standard
+v.in.gns|
+\end_layout
+
+\begin_layout Standard
+Imports US-NGA GEOnet Names Server (GNS) country files into a GRASS vector
+ points map.
+\end_layout
+
+\begin_layout Standard
+v.in.lines|
+\end_layout
+
+\begin_layout Standard
+Imports ASCII x,y[,z] coordinates as a series of lines.
+\end_layout
+
+\begin_layout Standard
+v.in.mapgen|
+\end_layout
+
+\begin_layout Standard
+Imports Mapgen or Matlab-ASCII vector maps into GRASS.
+\end_layout
+
+\begin_layout Standard
+v.in.wfs|v.krige|
+\end_layout
+
+\begin_layout Standard
+Performs ordinary or block kriging for vector maps.
+\end_layout
+
+\begin_layout Standard
+v.out.gps|v.pack|
+\end_layout
+
+\begin_layout Standard
+Packs up a vector map and support files for copying.
+\end_layout
+
+\begin_layout Standard
+v.rast.stats|
+\end_layout
+
+\begin_layout Standard
+Calculates univariate statistics from a raster map based on a vector map
+ and uploads statistics to new attribute columns.
+\end_layout
+
+\begin_layout Standard
+v.report|
+\end_layout
+
+\begin_layout Standard
+Reports geometry statistics for vector maps.
+\end_layout
+
+\begin_layout Standard
+v.to.lines|
+\end_layout
+
+\begin_layout Standard
+Converts vector polygons or points to lines.
+\end_layout
+
+\begin_layout Standard
+v.unpack|
+\end_layout
+
+\begin_layout Standard
+Unpacks a vector map packed with v.pack.
+\end_layout
+
+\begin_layout Standard
+v.what.vect|
+\end_layout
+
+\begin_layout Standard
+Uploads vector values at positions of vector points to the table.
+\end_layout
+
+\begin_layout Standard
+wxpyimgview|
+\end_layout
+
+\begin_layout Standard
+Views BMP images from the PNG driver.
+\end_layout
+
 \begin_layout Section
-GRASS-GIS Variables
+Environment Variables
 \end_layout
 
 \begin_layout Description
