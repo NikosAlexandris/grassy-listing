@@ -1,0 +1,190 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass tufte-handout
+\begin_preamble
+% Colors
+\usepackage{color}
+
+% gray
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{lightgray3}{gray}{0.95}
+\definecolor{lightgray4}{gray}{0.8}
+% red
+\definecolor{darkred}{rgb}{0.5,0.3,0.3}
+
+% green
+\definecolor{darkgreen}{rgb}{0.3,0.5,0.3}
+\definecolor{grassy}{RGB}{0, 130, 0}
+
+% blue
+\definecolor{darkblue}{rgb}{0.3,0.3,0.5}
+\definecolor{marineblue}{RGB}{0,73,117}%old definition: {rgb}{0.05,0.1,0.4}
+\definecolor{oceanblue}{RGB}{0,58,93}% old definition: {rgb}{0.05,0.1,0.5}
+\definecolor{greenblue}{RGB}{0,97,97}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{darkcyan}{rgb}{0.3,0.5,0.5}
+
+
+% Code listings
+\usepackage{textcomp}% listings require textcomp
+\usepackage{listings}
+
+% htt <-- what is this?
+%\usepackage[htt]{hyphenat}
+%\usepackage[htt]{listings} % this causes error(s)?
+
+% Listings
+\usepackage{listings}
+\renewcommand{\lstlistlistingname}{List of Listings}% Fix the List of Listings title
+
+\AtBeginDocument{% Beginning of AtBegin --->
+
+% "define" grassgis
+\lstdefinelanguage{grassgis}{
+alsoletter=-.,
+alsoother={\{\=\}},
+morekeywords=[1]{db.columns,db.connect,db.copy,db.createdb,db.databases,db.describe,db.drivers,db.dropcolumn,db.dropdb,db.droptable,db.execute,db.in.ogr,db.login,db.out.ogr,db.select,db.tables,db.test,db.univar,d.barscale,d.colorlist,d.colortable,d.correlate,d.erase,d.font,d.fontlist,d.geodesic,d.graph,d.grid,d.his,d.histogram,d.info,d.labels,d.legend,d.linegraph,d.mon,d.northarrow,d.out.file,d.path,d.polar,d.profile,d.rast.arrow,d.rast.edit,d.rast,d.rast.leg,d.rast.num,d.redraw,d.rgb,d.rhumbline,d.shadedmap,d.text,d.thematic.area,d.title,d.to.rast,d.vect.chart,d.vect,d.vect.thematic,d.what.rast,d.what.vect,d.where,db.columns,db.connect,db.copy,db.createdb,db.databases,db.describe,db.drivers,db.dropcolumn,db.dropdb,db.droptable,db.execute,db.in.ogr,db.login,db.out.ogr,db.select,db.tables,db.test,db.univar,g.access,g.cairocomp,g.copy,g.dirseps,g.extension.all,g.extension,g.filename,g.findetc,g.findfile,g.gisenv,g.gui.animation,g.gui.dbmgr,g.gui.gcp,g.gui.gmodeler,g.gui,g.gui.iclass,g.gui.mapswipe,g.gui.psmap,g.gui.rlisetup,g.gui.timeline,g.gui.vdigit,g.list,g.manual,g.mapset,g.mapsets,g.message,g.mkfontcap,g.parser,g.pnmcomp,g.ppmtopng,g.proj,g.region,g.remove,g.rename,g.tempfile,g.version,i.albedo,i.aster.toar,i.atcorr,i.biomass,i.cca,i.cluster,i.colors.enhance,i.eb.eta,i.eb.evapfr,i.eb.hsebal01,i.eb.netrad,i.eb.soilheatflux,i.emissivity,i.evapo.mh,i.evapo.pm,i.evapo.pt,i.evapo.time,i.fft,i.gensig,i.gensigset,i.group,i.his.rgb,i.ifft,i.image.mosaic,i.in.spotvgt,i.landsat.acca,i.landsat.toar,i.maxlik,i.modis.qc,i.oif,i.ortho.camera,i.ortho.elev,i.ortho.rectify,i.pansharpen,i.pca,i.rectify,i.rgb.his,i.segment,i.smap,i.spectral,i.target,i.tasscap,i.topo.corr,i.vi,i.zc,m.cogo,m.measure,m.nviz.image,m.nviz.script,m.proj,m.transform,ps.map,r.basins.fill,r.blend,r.buffer,r.buffer.lowmem,r.carve,r.category,r.circle,r.clump,r.coin,r.colors,r.colors.out,r.colors.stddev,r.composite,r.compress,r.contour,r.cost,r.covar,r.cross,r.describe,r.distance,r.drain,r.external,r.external.out,r.fill.dir,r.fillnulls,r.flow,r.grow.distance,r.grow,r.gwflow,r.his,r.horizon,r.in.ascii,r.in.aster,r.in.bin,r.in.gdal,r.in.gridatb,r.in.lidar,r.in.mat,r.in.png,r.in.poly,r.in.srtm,r.in.wms,r.in.xyz,r.info,r.kappa,r.lake,r.latlong,r.li.cwed,r.li.daemon,r.li.dominance,r.li.edgedensity,r.li,r.li.mpa,r.li.mps,r.li.padcv,r.li.padrange,r.li.padsd,r.li.patchdensity,r.li.patchnum,r.li.pielou,r.li.renyi,r.li.richness,r.li.shannon,r.li.shape,r.li.simpson,r.mapcalc,r.mask,r.mfilter,r.mode,r.neighbors,r.null,r.out.ascii,r.out.bin,r.out.gdal,r.out.gridatb,r.out.mat,r.out.mpeg,r.out.png,r.out.pov,r.out.ppm,r.out.ppm3,r.out.vrml,r.out.vtk,r.out.xyz,r.pack,r.param.scale,r.patch,r.plane,r.profile,r.proj,r.quant,r.quantile,r.random.cells,r.random,r.random.surface,r.reclass.area,r.reclass,r.recode,r.region,r.regression.line,r.regression.multi,r.report,r.resamp.bspline,r.resamp.filter,r.resamp.interp,r.resamp.rst,r.resamp.stats,r.resample,r.rescale.eq,r.rescale,r.rgb,r.ros,r.series.accumulate,r.series,r.series.interp,r.shaded.relief,r.sim.sediment,r.sim.water,r.slope.aspect,r.solute.transport,r.spread,r.spreadpath,r.statistics,r.stats,r.stats.quantile,r.stats.zonal,r.stream.extract,r.sun,r.sunhours,r.sunmask,r.support,r.support.stats,r.surf.area,r.surf.contour,r.surf.fractal,r.surf.gauss,r.surf.idw,r.surf.idw2,r.surf.random,r.terraflow,r.texture,r.thin,r.tile,r.tileset,r.timestamp,r.to.rast3,r.to.rast3elev,r.to.vect,r.topidx,r.topmodel,r.transect,r.univar,r.unpack,r.uslek,r.usler,r.viewshed,r.volume,r.walk,r.water.outlet,r.watershed,r.what.color,r.what,r3.colors,r3.colors.out,r3.cross.rast,r3.gwflow,r3.in.ascii,r3.in.bin,r3.in.v5d,r3.in.xyz,r3.info,r3.mapcalc,r3.mask,r3.mkdspf,r3.neighbors,r3.null,r3.out.ascii,r3.out.bin,r3.out.netcdf,r3.out.v5d,r3.out.vtk,r3.retile,r3.stats,r3.support,r3.timestamp,r3.to.rast,r3.univar,r3.colors,r3.colors.out,r3.cross.rast,r3.gwflow,r3.in.ascii,r3.in.bin,r3.in.v5d,r3.in.xyz,r3.info,r3.mapcalc,r3.mask,r3.mkdspf,r3.neighbors,r3.null,r3.out.ascii,r3.out.bin,r3.out.netcdf,r3.out.v5d,r3.out.vtk,r3.retile,r3.stats,r3.support,r3.timestamp,r3.to.rast,r3.univar,t.connect,t.create,t.info,t.list,t.merge,t.rast.accdetect,t.rast.accumulate,t.rast.aggregate.ds,t.rast.aggregate,t.rast.colors,t.rast.export,t.rast.extract,t.rast.gapfill,t.rast.import,t.rast.list,t.rast.mapcalc,t.rast.neighbors,t.rast.out.vtk,t.rast.series,t.rast.to.rast3,t.rast.univar,t.rast3d.extract,t.rast3d.list,t.rast3d.mapcalc,t.rast3d.univar,t.register,t.remove,t.rename,t.sample,t.shift,t.snap,t.support,t.topology,t.unregister,t.vect.db.select,t.vect.export,t.vect.extract,t.vect.import,t.vect.list,t.vect.observe.strds,t.vect.univar,t.vect.what.strds,v.buffer,v.build.all,v.build,v.build.polylines,v.category,v.centroids,v.class,v.clean,v.colors,v.colors.out,v.convert.all,v.convert,v.db.addcolumn,v.db.addtable,v.db.connect,v.db.dropcolumn,v.db.droprow,v.db.droptable,v.db.join,v.db.reconnect.all,v.db.renamecolumn,v.db.select,v.db.univar,v.db.update,v.delaunay,v.dissolve,v.distance,v.drape,v.edit,v.external,v.external.out,v.extract,v.extrude,v.generalize,v.hull,v.in.ascii,v.in.db,v.in.dxf,v.in.e00,v.in.geonames,v.in.gns,v.in.lidar,v.in.lines,v.in.mapgen,v.in.ogr,v.in.region,v.in.wfs,v.info,v.kcv,v.kernel,v.krige,v.label,v.lidar.correction,v.lidar.edgedetection,v.lidar.growing,v.lrs.create,v.lrs.label,v.lrs.segment,v.lrs.where,v.mkgrid,v.neighbors,v.net.alloc,v.net.allpairs,v.net.bridge,v.net.centrality,v.net.components,v.net.connectivity,v.net.distance,v.net.flow,v.net,v.net.iso,v.net.path,v.net.salesman,v.net.spanningtree,v.net.steiner,v.net.timetable,v.net.visibility,v.normal,v.out.ascii,v.out.dxf,v.out.gps,v.out.ogr,v.out.postgis,v.out.pov,v.out.svg,v.out.vtk,v.outlier,v.overlay,v.pack,v.parallel,v.patch,v.perturb,v.proj,v.qcount,v.random,v.rast.stats,v.reclass,v.rectify,v.report,v.sample,v.segment,v.select,v.split,v.support,v.surf.bspline,v.surf.idw,v.surf.rst,v.timestamp,v.to.3d,v.to.db,v.to.lines,v.to.points,v.to.rast,v.to.rast3,v.transform,v.type,v.univar,v.unpack,v.vect.stats,v.vol.rst,v.voronoi,v.what,v.what.rast,v.what.rast3,v.what.vect},
+morekeywords=[2]{v.db.addcol,v.db.dropcol,v.db.renamecol,v.db.update},
+morekeywords=[3]{region=, zoom=, nsres=, ewres=, MASK=, input=, in=, dsn=, rast=, map=, output=, out=, type=, use=, attrcolumn=, rgbcolumn=, labelcolumn=, method=, size=, title=, color=, null()=, S=, N=, W=, E=, -f, -g, n=, s=, w=, e=, --o, -c, -e, -s, -ca,-h,--help},
+morekeywords=[4]{APPDATA,ASCII,CELL,DCELL,DEBUG,FCELL,GISBASE,GISDBASE,GISRC,GIS_ERROR_LOG,GIS_LOCK,GRASS,GRASS_ADDON_BASE,GRASS_ADDON_ETC,GRASS_ADDON_PATH,GRASS_BATCH_JOB,GRASS_DB_ENCODING,GRASS_ENCODING,GRASS_ERROR_MAIL,GRASS_FONT,GRASS_FONT_CAP,GRASS_GNUPLOT,GRASS_GUI,GRASS_HTML_BROWSER,GRASS_INT_ZLIB,GRASS_MESSAGE_FORMAT,GRASS_MOUSE_BUTTON,GRASS_NO_GLX_PBUFFERS,GRASS_NO_GLX_PIXMAPS,GRASS_OVERWRITE,GRASS_PAGER,GRASS_PERL,GRASS_PYTHON,GRASS_REGION,GRASS_RENDER_FRAME,GRASS_RENDER_HEIGHT,GRASS_RENDER_IMMEDIATE,GRASS_RENDER_LINE_WIDTH,GRASS_RENDER_TEXT_SIZE,GRASS_RENDER_WIDTH,GRASS_SH,GRASS_SIGSEGV_ON_ERROR,GRASS_SKIP_MAPSET_OWNER_CHECK,GRASS_UI_TERM,GRASS_VECTOR_EXTERNAL_IGNORE,GRASS_VECTOR_EXTERNAL_IMMEDIATE,GRASS_VECTOR_LOWMEM,GRASS_VECTOR_OGR,GRASS_VECTOR_TEMPORARY,GRASS_VERBOSE,GRASS_VERSION,GRASS_WXBUNDLED,GRASS_XTERM,GRASS_ZLIB_LEVEL,GUI,LOCATION,LOCATION_NAME,MAPSET,OMP_NUM_THREADS,OVERWRITE,SIGSEGV,TEMP,TMP,TMPDIR,WIND_OVERRIDE,WX_DEBUG,wxGUI},
+sensitive=true,
+morestring=[b]"}
+
+% Default settings for code listings
+%  morecomment={[n][\keywordstyle]{{}{}}},
+\lstset{
+language=Python
+}
+\lstset{
+aboveskip=3mm,
+belowskip=3mm,%
+backgroundcolor={\color{lightgray3}},
+basicstyle={\small\ttfamily},%
+breaklines=true,
+prebreak={\textbackslash},%
+columns=fullflexible,%
+fillcolor=\color{grassy},
+frame=l,
+framexleftmargin=1em,
+framexrightmargin=0em,
+framextopmargin=1em,
+framexbottommargin=1em,
+framerule=0em,%
+language=grassgis,
+literate={{=}{{{\bfseries\color{greenblue}=}}}1},
+commentstyle={\itshape\color{lightgray}},
+stringstyle=\color{orange},
+keywordstyle=[1]\bfseries\color{grassy},
+keywordstyle=[2]\color{red},
+keywordstyle=[3]\color{darkgreen},
+keywordstyle=[4]\color{magenta},%
+numbers=left,
+numberstyle=\tiny\ttfamily,
+numbersep=3em,%
+keepspaces=true,
+showstringspaces=false,%
+tab=BADTAB,
+showtabs=true,%
+upquote=true
+}
+}% see: <http://tex.stackexchange.com/a/145868/8272>
+
+% Be less rigorous with line breaking
+\sloppy
+\end_preamble
+\use_default_options true
+\begin_modules
+fixltx2e
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "GRASS GIS modules and variables"
+\pdf_author "Nikos Alexandris"
+\pdf_subject "List of GRASS GIS modules and environment variables"
+\pdf_keywords "grass gis, modules, variables"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dcdcdc
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -2
+\tocdepth 2
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Postscript commands (ps.*)
+\end_layout
+
+\begin_layout Description
+ps.map Produces hardcopy PostScript map output.
+\end_layout
+
+\end_body
+\end_document

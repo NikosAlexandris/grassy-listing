@@ -1,0 +1,890 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass tufte-handout
+\begin_preamble
+% Colors
+\usepackage{color}
+
+% gray
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{lightgray3}{gray}{0.95}
+\definecolor{lightgray4}{gray}{0.8}
+% red
+\definecolor{darkred}{rgb}{0.5,0.3,0.3}
+
+% green
+\definecolor{darkgreen}{rgb}{0.3,0.5,0.3}
+\definecolor{grassy}{RGB}{0, 130, 0}
+
+% blue
+\definecolor{darkblue}{rgb}{0.3,0.3,0.5}
+\definecolor{marineblue}{RGB}{0,73,117}%old definition: {rgb}{0.05,0.1,0.4}
+\definecolor{oceanblue}{RGB}{0,58,93}% old definition: {rgb}{0.05,0.1,0.5}
+\definecolor{greenblue}{RGB}{0,97,97}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{darkcyan}{rgb}{0.3,0.5,0.5}
+
+
+% Code listings
+\usepackage{textcomp}% listings require textcomp
+\usepackage{listings}
+
+% htt <-- what is this?
+%\usepackage[htt]{hyphenat}
+%\usepackage[htt]{listings} % this causes error(s)?
+
+% Listings
+\usepackage{listings}
+\renewcommand{\lstlistlistingname}{List of Listings}% Fix the List of Listings title
+
+\AtBeginDocument{% Beginning of AtBegin --->
+
+% "define" grassgis
+\lstdefinelanguage{grassgis}{
+alsoletter=-.,
+alsoother={\{\=\}},
+morekeywords=[1]{db.columns,db.connect,db.copy,db.createdb,db.databases,db.describe,db.drivers,db.dropcolumn,db.dropdb,db.droptable,db.execute,db.in.ogr,db.login,db.out.ogr,db.select,db.tables,db.test,db.univar,d.barscale,d.colorlist,d.colortable,d.correlate,d.erase,d.font,d.fontlist,d.geodesic,d.graph,d.grid,d.his,d.histogram,d.info,d.labels,d.legend,d.linegraph,d.mon,d.northarrow,d.out.file,d.path,d.polar,d.profile,d.rast.arrow,d.rast.edit,d.rast,d.rast.leg,d.rast.num,d.redraw,d.rgb,d.rhumbline,d.shadedmap,d.text,d.thematic.area,d.title,d.to.rast,d.vect.chart,d.vect,d.vect.thematic,d.what.rast,d.what.vect,d.where,db.columns,db.connect,db.copy,db.createdb,db.databases,db.describe,db.drivers,db.dropcolumn,db.dropdb,db.droptable,db.execute,db.in.ogr,db.login,db.out.ogr,db.select,db.tables,db.test,db.univar,g.access,g.cairocomp,g.copy,g.dirseps,g.extension.all,g.extension,g.filename,g.findetc,g.findfile,g.gisenv,g.gui.animation,g.gui.dbmgr,g.gui.gcp,g.gui.gmodeler,g.gui,g.gui.iclass,g.gui.mapswipe,g.gui.psmap,g.gui.rlisetup,g.gui.timeline,g.gui.vdigit,g.list,g.manual,g.mapset,g.mapsets,g.message,g.mkfontcap,g.parser,g.pnmcomp,g.ppmtopng,g.proj,g.region,g.remove,g.rename,g.tempfile,g.version,i.albedo,i.aster.toar,i.atcorr,i.biomass,i.cca,i.cluster,i.colors.enhance,i.eb.eta,i.eb.evapfr,i.eb.hsebal01,i.eb.netrad,i.eb.soilheatflux,i.emissivity,i.evapo.mh,i.evapo.pm,i.evapo.pt,i.evapo.time,i.fft,i.gensig,i.gensigset,i.group,i.his.rgb,i.ifft,i.image.mosaic,i.in.spotvgt,i.landsat.acca,i.landsat.toar,i.maxlik,i.modis.qc,i.oif,i.ortho.camera,i.ortho.elev,i.ortho.rectify,i.pansharpen,i.pca,i.rectify,i.rgb.his,i.segment,i.smap,i.spectral,i.target,i.tasscap,i.topo.corr,i.vi,i.zc,m.cogo,m.measure,m.nviz.image,m.nviz.script,m.proj,m.transform,ps.map,r.basins.fill,r.blend,r.buffer,r.buffer.lowmem,r.carve,r.category,r.circle,r.clump,r.coin,r.colors,r.colors.out,r.colors.stddev,r.composite,r.compress,r.contour,r.cost,r.covar,r.cross,r.describe,r.distance,r.drain,r.external,r.external.out,r.fill.dir,r.fillnulls,r.flow,r.grow.distance,r.grow,r.gwflow,r.his,r.horizon,r.in.ascii,r.in.aster,r.in.bin,r.in.gdal,r.in.gridatb,r.in.lidar,r.in.mat,r.in.png,r.in.poly,r.in.srtm,r.in.wms,r.in.xyz,r.info,r.kappa,r.lake,r.latlong,r.li.cwed,r.li.daemon,r.li.dominance,r.li.edgedensity,r.li,r.li.mpa,r.li.mps,r.li.padcv,r.li.padrange,r.li.padsd,r.li.patchdensity,r.li.patchnum,r.li.pielou,r.li.renyi,r.li.richness,r.li.shannon,r.li.shape,r.li.simpson,r.mapcalc,r.mask,r.mfilter,r.mode,r.neighbors,r.null,r.out.ascii,r.out.bin,r.out.gdal,r.out.gridatb,r.out.mat,r.out.mpeg,r.out.png,r.out.pov,r.out.ppm,r.out.ppm3,r.out.vrml,r.out.vtk,r.out.xyz,r.pack,r.param.scale,r.patch,r.plane,r.profile,r.proj,r.quant,r.quantile,r.random.cells,r.random,r.random.surface,r.reclass.area,r.reclass,r.recode,r.region,r.regression.line,r.regression.multi,r.report,r.resamp.bspline,r.resamp.filter,r.resamp.interp,r.resamp.rst,r.resamp.stats,r.resample,r.rescale.eq,r.rescale,r.rgb,r.ros,r.series.accumulate,r.series,r.series.interp,r.shaded.relief,r.sim.sediment,r.sim.water,r.slope.aspect,r.solute.transport,r.spread,r.spreadpath,r.statistics,r.stats,r.stats.quantile,r.stats.zonal,r.stream.extract,r.sun,r.sunhours,r.sunmask,r.support,r.support.stats,r.surf.area,r.surf.contour,r.surf.fractal,r.surf.gauss,r.surf.idw,r.surf.idw2,r.surf.random,r.terraflow,r.texture,r.thin,r.tile,r.tileset,r.timestamp,r.to.rast3,r.to.rast3elev,r.to.vect,r.topidx,r.topmodel,r.transect,r.univar,r.unpack,r.uslek,r.usler,r.viewshed,r.volume,r.walk,r.water.outlet,r.watershed,r.what.color,r.what,r3.colors,r3.colors.out,r3.cross.rast,r3.gwflow,r3.in.ascii,r3.in.bin,r3.in.v5d,r3.in.xyz,r3.info,r3.mapcalc,r3.mask,r3.mkdspf,r3.neighbors,r3.null,r3.out.ascii,r3.out.bin,r3.out.netcdf,r3.out.v5d,r3.out.vtk,r3.retile,r3.stats,r3.support,r3.timestamp,r3.to.rast,r3.univar,r3.colors,r3.colors.out,r3.cross.rast,r3.gwflow,r3.in.ascii,r3.in.bin,r3.in.v5d,r3.in.xyz,r3.info,r3.mapcalc,r3.mask,r3.mkdspf,r3.neighbors,r3.null,r3.out.ascii,r3.out.bin,r3.out.netcdf,r3.out.v5d,r3.out.vtk,r3.retile,r3.stats,r3.support,r3.timestamp,r3.to.rast,r3.univar,t.connect,t.create,t.info,t.list,t.merge,t.rast.accdetect,t.rast.accumulate,t.rast.aggregate.ds,t.rast.aggregate,t.rast.colors,t.rast.export,t.rast.extract,t.rast.gapfill,t.rast.import,t.rast.list,t.rast.mapcalc,t.rast.neighbors,t.rast.out.vtk,t.rast.series,t.rast.to.rast3,t.rast.univar,t.rast3d.extract,t.rast3d.list,t.rast3d.mapcalc,t.rast3d.univar,t.register,t.remove,t.rename,t.sample,t.shift,t.snap,t.support,t.topology,t.unregister,t.vect.db.select,t.vect.export,t.vect.extract,t.vect.import,t.vect.list,t.vect.observe.strds,t.vect.univar,t.vect.what.strds,v.buffer,v.build.all,v.build,v.build.polylines,v.category,v.centroids,v.class,v.clean,v.colors,v.colors.out,v.convert.all,v.convert,v.db.addcolumn,v.db.addtable,v.db.connect,v.db.dropcolumn,v.db.droprow,v.db.droptable,v.db.join,v.db.reconnect.all,v.db.renamecolumn,v.db.select,v.db.univar,v.db.update,v.delaunay,v.dissolve,v.distance,v.drape,v.edit,v.external,v.external.out,v.extract,v.extrude,v.generalize,v.hull,v.in.ascii,v.in.db,v.in.dxf,v.in.e00,v.in.geonames,v.in.gns,v.in.lidar,v.in.lines,v.in.mapgen,v.in.ogr,v.in.region,v.in.wfs,v.info,v.kcv,v.kernel,v.krige,v.label,v.lidar.correction,v.lidar.edgedetection,v.lidar.growing,v.lrs.create,v.lrs.label,v.lrs.segment,v.lrs.where,v.mkgrid,v.neighbors,v.net.alloc,v.net.allpairs,v.net.bridge,v.net.centrality,v.net.components,v.net.connectivity,v.net.distance,v.net.flow,v.net,v.net.iso,v.net.path,v.net.salesman,v.net.spanningtree,v.net.steiner,v.net.timetable,v.net.visibility,v.normal,v.out.ascii,v.out.dxf,v.out.gps,v.out.ogr,v.out.postgis,v.out.pov,v.out.svg,v.out.vtk,v.outlier,v.overlay,v.pack,v.parallel,v.patch,v.perturb,v.proj,v.qcount,v.random,v.rast.stats,v.reclass,v.rectify,v.report,v.sample,v.segment,v.select,v.split,v.support,v.surf.bspline,v.surf.idw,v.surf.rst,v.timestamp,v.to.3d,v.to.db,v.to.lines,v.to.points,v.to.rast,v.to.rast3,v.transform,v.type,v.univar,v.unpack,v.vect.stats,v.vol.rst,v.voronoi,v.what,v.what.rast,v.what.rast3,v.what.vect},
+morekeywords=[2]{v.db.addcol,v.db.dropcol,v.db.renamecol,v.db.update},
+morekeywords=[3]{region=, zoom=, nsres=, ewres=, MASK=, input=, in=, dsn=, rast=, map=, output=, out=, type=, use=, attrcolumn=, rgbcolumn=, labelcolumn=, method=, size=, title=, color=, null()=, S=, N=, W=, E=, -f, -g, n=, s=, w=, e=, --o, -c, -e, -s, -ca,-h,--help},
+morekeywords=[4]{APPDATA,ASCII,CELL,DCELL,DEBUG,FCELL,GISBASE,GISDBASE,GISRC,GIS_ERROR_LOG,GIS_LOCK,GRASS,GRASS_ADDON_BASE,GRASS_ADDON_ETC,GRASS_ADDON_PATH,GRASS_BATCH_JOB,GRASS_DB_ENCODING,GRASS_ENCODING,GRASS_ERROR_MAIL,GRASS_FONT,GRASS_FONT_CAP,GRASS_GNUPLOT,GRASS_GUI,GRASS_HTML_BROWSER,GRASS_INT_ZLIB,GRASS_MESSAGE_FORMAT,GRASS_MOUSE_BUTTON,GRASS_NO_GLX_PBUFFERS,GRASS_NO_GLX_PIXMAPS,GRASS_OVERWRITE,GRASS_PAGER,GRASS_PERL,GRASS_PYTHON,GRASS_REGION,GRASS_RENDER_FRAME,GRASS_RENDER_HEIGHT,GRASS_RENDER_IMMEDIATE,GRASS_RENDER_LINE_WIDTH,GRASS_RENDER_TEXT_SIZE,GRASS_RENDER_WIDTH,GRASS_SH,GRASS_SIGSEGV_ON_ERROR,GRASS_SKIP_MAPSET_OWNER_CHECK,GRASS_UI_TERM,GRASS_VECTOR_EXTERNAL_IGNORE,GRASS_VECTOR_EXTERNAL_IMMEDIATE,GRASS_VECTOR_LOWMEM,GRASS_VECTOR_OGR,GRASS_VECTOR_TEMPORARY,GRASS_VERBOSE,GRASS_VERSION,GRASS_WXBUNDLED,GRASS_XTERM,GRASS_ZLIB_LEVEL,GUI,LOCATION,LOCATION_NAME,MAPSET,OMP_NUM_THREADS,OVERWRITE,SIGSEGV,TEMP,TMP,TMPDIR,WIND_OVERRIDE,WX_DEBUG,wxGUI},
+sensitive=true,
+morestring=[b]"}
+
+% Default settings for code listings
+%  morecomment={[n][\keywordstyle]{{}{}}},
+\lstset{
+language=Python
+}
+\lstset{
+aboveskip=3mm,
+belowskip=3mm,%
+backgroundcolor={\color{lightgray3}},
+basicstyle={\small\ttfamily},%
+breaklines=true,
+prebreak={\textbackslash},%
+columns=fullflexible,%
+fillcolor=\color{grassy},
+frame=l,
+framexleftmargin=1em,
+framexrightmargin=0em,
+framextopmargin=1em,
+framexbottommargin=1em,
+framerule=0em,%
+language=grassgis,
+literate={{=}{{{\bfseries\color{greenblue}=}}}1},
+commentstyle={\itshape\color{lightgray}},
+stringstyle=\color{orange},
+keywordstyle=[1]\bfseries\color{grassy},
+keywordstyle=[2]\color{red},
+keywordstyle=[3]\color{darkgreen},
+keywordstyle=[4]\color{magenta},%
+numbers=left,
+numberstyle=\tiny\ttfamily,
+numbersep=3em,%
+keepspaces=true,
+showstringspaces=false,%
+tab=BADTAB,
+showtabs=true,%
+upquote=true
+}
+}% see: <http://tex.stackexchange.com/a/145868/8272>
+
+% Be less rigorous with line breaking
+\sloppy
+\end_preamble
+\use_default_options true
+\begin_modules
+fixltx2e
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "GRASS GIS modules and variables"
+\pdf_author "Nikos Alexandris"
+\pdf_subject "List of GRASS GIS modules and environment variables"
+\pdf_keywords "grass gis, modules, variables"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dcdcdc
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -2
+\tocdepth 2
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Raster commands (r.*)
+\end_layout
+
+\begin_layout Description
+r.basins.fill Generates watershed subbasins raster map.
+\end_layout
+
+\begin_layout Description
+r.blend Blends color components of two raster maps by a given ratio.
+\end_layout
+
+\begin_layout Description
+r.buffer Creates a raster map showing buffer zones surrounding cells that
+ contain non-NULL category values.
+\end_layout
+
+\begin_layout Description
+r.buffer.lowmem Creates a raster map showing buffer zones surrounding cells
+ that contain non-NULL category values.
+\end_layout
+
+\begin_layout Description
+r.carve Generates stream channels.
+\end_layout
+
+\begin_layout Description
+r.category Manages category values and labels associated with user-specified
+ raster map layers.
+\end_layout
+
+\begin_layout Description
+r.circle Creates a raster map containing concentric rings around a given
+ point.
+\end_layout
+
+\begin_layout Description
+r.clump Recategorizes data in a raster map by grouping cells that form physically
+ discrete areas into unique categories.
+\end_layout
+
+\begin_layout Description
+r.coin Tabulates the mutual occurrence (coincidence) of categories for two
+ raster map layers.
+\end_layout
+
+\begin_layout Description
+r.colors Creates/modifies the color table associated with a raster map.
+\end_layout
+
+\begin_layout Description
+r.colors.out Exports the color table associated with a raster map.
+\end_layout
+
+\begin_layout Description
+r.colors.stddev Sets color rules based on stddev from a raster map's mean
+ value.
+\end_layout
+
+\begin_layout Description
+r.composite Combines red, green and blue raster maps into a single composite
+ raster map.
+\end_layout
+
+\begin_layout Description
+r.compress Compresses and decompresses raster maps.
+\end_layout
+
+\begin_layout Description
+r.contour Produces a vector map of specified contours from a raster map.
+\end_layout
+
+\begin_layout Description
+r.cost Creates a raster map showing the cumulative cost of moving between
+ different geographic locations on an input raster map whose cell category
+ values represent cost.
+\end_layout
+
+\begin_layout Description
+r.covar Outputs a covariance/correlation matrix for user-specified raster
+ map layer(s).
+\end_layout
+
+\begin_layout Description
+r.cross Creates a cross product of the category values from multiple raster
+ map layers.
+\end_layout
+
+\begin_layout Description
+r.describe Prints terse list of category values found in a raster map layer.
+\end_layout
+
+\begin_layout Description
+r.distance Locates the closest points between objects in two raster maps.
+\end_layout
+
+\begin_layout Description
+r.drain Traces a flow through an elevation model or cost surface on a raster
+ map.
+\end_layout
+
+\begin_layout Description
+r.external Links GDAL supported raster data as a pseudo GRASS raster map.
+\end_layout
+
+\begin_layout Description
+r.external.out Defines raster output format utilizing GDAL library.
+\end_layout
+
+\begin_layout Description
+r.fill.dir Filters and generates a depressionless elevation map and a flow
+ direction map from a given elevation raster map.
+\end_layout
+
+\begin_layout Description
+r.fillnulls Fills no-data areas in raster maps using spline interpolation.
+\end_layout
+
+\begin_layout Description
+r.flow Constructs flowlines.
+\end_layout
+
+\begin_layout Description
+r.grow.distance Generates a raster map containing distances to nearest raster
+ features.
+\end_layout
+
+\begin_layout Description
+r.grow Generates a raster map layer with contiguous areas grown by one cell.
+\end_layout
+
+\begin_layout Description
+r.gwflow Numerical calculation program for transient, confined and unconfined
+ groundwater flow in two dimensions.
+\end_layout
+
+\begin_layout Description
+r.his Generates red, green and blue raster map layers combining hue, intensity
+ and saturation (HIS) values from user-specified input raster map layers.
+\end_layout
+
+\begin_layout Description
+r.horizon Computes horizon angle height from a digital elevation model.
+\end_layout
+
+\begin_layout Description
+r.in.ascii Converts a GRASS ASCII raster file to binary raster map.
+\end_layout
+
+\begin_layout Description
+r.in.aster Georeference, rectify, and import Terra-ASTER imagery and relative
+ DEMs using gdalwarp.
+\end_layout
+
+\begin_layout Description
+r.in.bin Import a binary raster file into a GRASS raster map layer.
+\end_layout
+
+\begin_layout Description
+r.in.gdal Imports raster data into a GRASS raster map using GDAL library.
+\end_layout
+
+\begin_layout Description
+r.in.gridatb Imports GRIDATB.FOR map file (TOPMODEL) into a GRASS raster map.
+\end_layout
+
+\begin_layout Description
+r.in.lidar Creates a raster map from LAS LiDAR points using univariate statistics.
+\end_layout
+
+\begin_layout Description
+r.in.mat Imports a binary MAT-File(v4) to a GRASS raster.
+\end_layout
+
+\begin_layout Description
+r.in.png Imports non-georeferenced PNG format image.
+\end_layout
+
+\begin_layout Description
+r.in.poly Creates raster maps from ASCII polygon/line/point data files.
+\end_layout
+
+\begin_layout Description
+r.in.srtm Imports SRTM HGT files into raster map.
+\end_layout
+
+\begin_layout Description
+r.in.wms Downloads and imports data from WMS/WMTS/NASA OnEarth server.
+\end_layout
+
+\begin_layout Description
+r.in.xyz Creates a raster map from an assemblage of many coordinates using
+ univariate statistics.
+\end_layout
+
+\begin_layout Description
+r.info Outputs basic information about a raster map.
+\end_layout
+
+\begin_layout Description
+r.kappa Calculates error matrix and kappa parameter for accuracy assessment
+ of classification result.
+\end_layout
+
+\begin_layout Description
+r.lake Fills lake at given point to given level.
+\end_layout
+
+\begin_layout Description
+r.latlong Creates a latitude/longitude raster map.
+\end_layout
+
+\begin_layout Description
+r.li.cwed Calculates contrast weighted edge density index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.daemon Support module for r.li landscape index calculations.
+\end_layout
+
+\begin_layout Description
+r.li.dominance Calculates dominance's diversity index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.edgedensity Calculates edge density index on a raster map, using a 4
+ neighbour algorithm
+\end_layout
+
+\begin_layout Description
+r.li
+\end_layout
+
+\begin_layout Description
+r.li.mpa Calculates mean pixel attribute index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.mps Calculates mean patch size index on a raster map, using a 4 neighbour
+ algorithm
+\end_layout
+
+\begin_layout Description
+r.li.padcv Calculates coefficient of variation of patch area on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.padrange Calculates range of patch area size on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.padsd Calculates standard deviation of patch area a raster map
+\end_layout
+
+\begin_layout Description
+r.li.patchdensity Calculates patch density index on a raster map, using a
+ 4 neighbour algorithm
+\end_layout
+
+\begin_layout Description
+r.li.patchnum Calculates patch number index on a raster map, using a 4 neighbour
+ algorithm.
+\end_layout
+
+\begin_layout Description
+r.li.pielou Calculates Pielou's diversity index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.renyi Calculates Renyi's diversity index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.richness Calculates richness index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.shannon Calculates Shannon's diversity index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.shape Calculates shape index on a raster map
+\end_layout
+
+\begin_layout Description
+r.li.simpson Calculates Simpson's diversity index on a raster map
+\end_layout
+
+\begin_layout Description
+r.mapcalc Raster map calculator.
+\end_layout
+
+\begin_layout Description
+r.mask Creates a MASK for limiting raster operation.
+\end_layout
+
+\begin_layout Description
+r.mfilter Performs raster map matrix filter.
+\end_layout
+
+\begin_layout Description
+r.mode Finds the mode of values in a cover map within areas assigned the
+ same category value in a user-specified base map.
+\end_layout
+
+\begin_layout Description
+r.neighbors Makes each cell category value a function of the category values
+ assigned to the cells around it, and stores new cell values in an output
+ raster map layer.
+\end_layout
+
+\begin_layout Description
+r.null Manages NULL-values of given raster map.
+\end_layout
+
+\begin_layout Description
+r.out.ascii Converts a raster map layer into a GRASS ASCII text file.
+\end_layout
+
+\begin_layout Description
+r.out.bin Exports a GRASS raster to a binary array.
+\end_layout
+
+\begin_layout Description
+r.out.gdal Exports GRASS raster maps into GDAL supported formats.
+\end_layout
+
+\begin_layout Description
+r.out.gridatb Exports GRASS raster map to GRIDATB.FOR map file (TOPMODEL).
+\end_layout
+
+\begin_layout Description
+r.out.mat Exports a GRASS raster to a binary MAT-File.
+\end_layout
+
+\begin_layout Description
+r.out.mpeg Converts raster map series to MPEG movie.
+\end_layout
+
+\begin_layout Description
+r.out.png Export a GRASS raster map as a non-georeferenced PNG image.
+\end_layout
+
+\begin_layout Description
+r.out.pov Converts a raster map layer into a height-field file for POV-Ray.
+\end_layout
+
+\begin_layout Description
+r.out.ppm Converts a GRASS raster map to a PPM image file.
+\end_layout
+
+\begin_layout Description
+r.out.ppm3 Converts 3 GRASS raster layers (R,G,B) to a PPM image file.
+\end_layout
+
+\begin_layout Description
+r.out.vrml Exports a raster map to the Virtual Reality Modeling Language (VRML).
+\end_layout
+
+\begin_layout Description
+r.out.vtk Converts raster maps into the VTK-ASCII format.
+\end_layout
+
+\begin_layout Description
+r.out.xyz Exports a raster map to a text file as x,y,z values based on cell
+ centers.
+\end_layout
+
+\begin_layout Description
+r.pack Packs up a raster map and support files for copying.
+\end_layout
+
+\begin_layout Description
+r.param.scale Extracts terrain parameters from a DEM.
+\end_layout
+
+\begin_layout Description
+r.patch Creates a composite raster map layer by using known category values
+ from one (or more) map layer(s) to fill in areas of "no data" in another
+ map layer.
+\end_layout
+
+\begin_layout Description
+r.plane Creates raster plane map given dip (inclination), aspect (azimuth)
+ and one point.
+\end_layout
+
+\begin_layout Description
+r.profile Outputs the raster map layer values lying on user-defined line(s).
+\end_layout
+
+\begin_layout Description
+r.proj Re-projects a raster map from given location to the current location.
+\end_layout
+
+\begin_layout Description
+r.quant Produces the quantization file for a floating-point map.
+\end_layout
+
+\begin_layout Description
+r.quantile Compute quantiles using two passes.
+\end_layout
+
+\begin_layout Description
+r.random.cells Generates random cell values with spatial dependence.
+\end_layout
+
+\begin_layout Description
+r.random Creates a raster map layer and vector point map containing randomly
+ located points.
+\end_layout
+
+\begin_layout Description
+r.random.surface Generates random surface(s) with spatial dependence.
+\end_layout
+
+\begin_layout Description
+r.reclass.area Reclasses a raster map greater or less than user specified
+ area size (in hectares).
+\end_layout
+
+\begin_layout Description
+r.reclass Reclassify raster map based on category values.
+\end_layout
+
+\begin_layout Description
+r.recode Recodes categorical raster maps.
+\end_layout
+
+\begin_layout Description
+r.region Sets the boundary definitions for a raster map.
+\end_layout
+
+\begin_layout Description
+r.regression.line Calculates linear regression from two raster maps: y = a
+ + b*x.
+\end_layout
+
+\begin_layout Description
+r.regression.multi Calculates multiple linear regression from raster maps.
+\end_layout
+
+\begin_layout Description
+r.report Reports statistics for raster maps.
+\end_layout
+
+\begin_layout Description
+r.resamp.bspline Performs bilinear or bicubic spline interpolation with Tykhonov
+ regularization.
+\end_layout
+
+\begin_layout Description
+r.resamp.filter Resamples raster map layers using an analytic kernel.
+\end_layout
+
+\begin_layout Description
+r.resamp.interp Resamples raster map to a finer grid using interpolation.
+\end_layout
+
+\begin_layout Description
+r.resamp.rst Reinterpolates and optionally computes topographic analysis from
+ input raster map to a new raster map (possibly with different resolution)
+ using regularized spline with tension and smoothing.
+\end_layout
+
+\begin_layout Description
+r.resamp.stats Resamples raster map layers to a coarser grid using aggregation.
+\end_layout
+
+\begin_layout Description
+r.resample GRASS raster map layer data resampling capability.
+\end_layout
+
+\begin_layout Description
+r.rescale.eq Rescales histogram equalized the range of category values in
+ a raster map layer.
+\end_layout
+
+\begin_layout Description
+r.rescale Rescales the range of category values in a raster map layer.
+\end_layout
+
+\begin_layout Description
+r.rgb Splits a raster map into red, green and blue maps.
+\end_layout
+
+\begin_layout Description
+r.ros Generates rate of spread raster maps.
+\end_layout
+
+\begin_layout Description
+r.series.accumulate Makes each output cell value a accumulationfunction of
+ the values assigned to the corresponding cells in the input raster map
+ layers.
+\end_layout
+
+\begin_layout Description
+r.series Makes each output cell value a function of the values assigned to
+ the corresponding cells in the input raster map layers.
+\end_layout
+
+\begin_layout Description
+r.series.interp Interpolate raster maps located (temporal or spatial) in between
+ input raster maps at specific sampling positions.
+\end_layout
+
+\begin_layout Description
+r.shaded.relief Creates shaded relief map from an elevation map (DEM).
+\end_layout
+
+\begin_layout Description
+r.sim.sediment Sediment transport and erosion/deposition simulation using
+ path sampling method (SIMWE).
+\end_layout
+
+\begin_layout Description
+r.sim.water Overland flow hydrologic simulation using path sampling method
+ (SIMWE).
+\end_layout
+
+\begin_layout Description
+r.slope.aspect Generates raster maps of slope, aspect, curvatures and partial
+ derivatives from an elevation raster map.
+\end_layout
+
+\begin_layout Description
+r.solute.transport Numerical calculation program for transient, confined and
+ unconfined solute transport in two dimensions
+\end_layout
+
+\begin_layout Description
+r.spread Simulates elliptically anisotropic spread.
+\end_layout
+
+\begin_layout Description
+r.spreadpath Recursively traces the least cost path backwards to cells from
+ which the cumulative cost was determined.
+\end_layout
+
+\begin_layout Description
+r.statistics Calculates category or object oriented statistics.
+\end_layout
+
+\begin_layout Description
+r.stats Generates area statistics for raster map.
+\end_layout
+
+\begin_layout Description
+r.stats.quantile Compute category quantiles using two passes.
+\end_layout
+
+\begin_layout Description
+r.stats.zonal Calculates category or object oriented statistics (accumulator-based
+ statistics).
+\end_layout
+
+\begin_layout Description
+r.stream.extract Performs stream network extraction.
+\end_layout
+
+\begin_layout Description
+r.sun Solar irradiance and irradiation model.
+\end_layout
+
+\begin_layout Description
+r.sunhours Calculates solar elevation, solar azimuth, and sun hours.
+\end_layout
+
+\begin_layout Description
+r.sunmask Calculates cast shadow areas from sun position and elevation raster
+ map.
+\end_layout
+
+\begin_layout Description
+r.support Allows creation and/or modification of raster map layer support
+ files.
+\end_layout
+
+\begin_layout Description
+r.support.stats Update raster map statistics
+\end_layout
+
+\begin_layout Description
+r.surf.area Prints estimation of surface area for raster map.
+\end_layout
+
+\begin_layout Description
+r.surf.contour Generates surface raster map from rasterized contours.
+\end_layout
+
+\begin_layout Description
+r.surf.fractal Creates a fractal surface of a given fractal dimension.
+\end_layout
+
+\begin_layout Description
+r.surf.gauss Generates a raster map using gaussian random number generator.
+\end_layout
+
+\begin_layout Description
+r.surf.idw Surface interpolation utility for raster map.
+\end_layout
+
+\begin_layout Description
+r.surf.idw2 Surface generation program.
+\end_layout
+
+\begin_layout Description
+r.surf.random Produces a raster surface map of uniform random deviates with
+ defined range.
+\end_layout
+
+\begin_layout Description
+r.terraflow Flow computation for massive grids (float version).
+\end_layout
+
+\begin_layout Description
+r.texture Generate images with textural features from a raster map.
+\end_layout
+
+\begin_layout Description
+r.thin Thins non-zero cells that denote linear features in a raster map layer.
+\end_layout
+
+\begin_layout Description
+r.tile Splits a raster map into tiles.
+\end_layout
+
+\begin_layout Description
+r.tileset Produces tilings of the source projection for use in the destination
+ region and projection.
+\end_layout
+
+\begin_layout Description
+r.timestamp Modifies a timestamp for a raster map.
+\end_layout
+
+\begin_layout Description
+r.to.rast3 Converts 2D raster map slices to one 3D raster volume map.
+\end_layout
+
+\begin_layout Description
+r.to.rast3elev Creates a 3D volume map based on 2D elevation and value raster
+ maps.
+\end_layout
+
+\begin_layout Description
+r.to.vect Converts a raster map into a vector map.
+\end_layout
+
+\begin_layout Description
+r.topidx Creates a topographic index raster map from an elevation raster
+ map.
+\end_layout
+
+\begin_layout Description
+r.topmodel Simulates TOPMODEL which is a physically based hydrologic model.
+\end_layout
+
+\begin_layout Description
+r.transect Outputs raster map layer values lying along user defined transect
+ line(s).
+\end_layout
+
+\begin_layout Description
+r.univar Calculates univariate statistics from the non-null cells of a raster
+ map.
+\end_layout
+
+\begin_layout Description
+r.unpack Unpacks a raster map packed with r.pack.
+\end_layout
+
+\begin_layout Description
+r.uslek Computes USLE Soil Erodibility Factor (K).
+\end_layout
+
+\begin_layout Description
+r.usler Computes USLE R factor, Rainfall erosivity index.
+\end_layout
+
+\begin_layout Description
+r.viewshed Computes the viewshed of a point on an elevation raster map.
+\end_layout
+
+\begin_layout Description
+r.volume Calculates the volume of data "clumps".
+\end_layout
+
+\begin_layout Description
+r.walk Outputs a raster map showing the anisotropic cumulative cost.
+\end_layout
+
+\begin_layout Description
+r.water.outlet Creates watershed basins from a drainage direction map.
+\end_layout
+
+\begin_layout Description
+r.watershed Calculates hydrological parameters and RUSLE factors.
+\end_layout
+
+\begin_layout Description
+r.what.color Queries colors for a raster map layer.
+\end_layout
+
+\begin_layout Description
+r.what Queries raster maps on their category values and category labels.
+\end_layout
+
+\end_body
+\end_document
