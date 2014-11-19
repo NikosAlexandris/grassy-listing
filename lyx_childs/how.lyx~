@@ -183,7 +183,7 @@ logicalmkup
 How did I get this?
 \end_layout
 
-\begin_layout Full Width
+\begin_layout Standard
 \begin_inset listings
 lstparams "basicstyle={\tiny\ttfamily},language=bash,tabsize=4"
 inline false
