@@ -297,28 +297,29 @@ alsoother={
 
 \begin_layout Plain Layout
 
-% db
-\end_layout
-
-\begin_layout Plain Layout
-
-morekeywords=[1]{db.columns, db.connect, db.copy, db.createdb, db.databases,
- db.describe, db.drivers, db.dropcolumn, db.dropdb, db.droptable, db.execute,
- db.in.ogr, db.login, db.out.ogr, db.select, db.tables, db.test, db.univar},
-\end_layout
-
-\begin_layout Plain Layout
-
 % d
 \end_layout
 
 \begin_layout Plain Layout
 
-morekeywords=[2]{d.barscale,d.colorlist,d.colortable,d.correlate,d.erase,d.font,d.fontl
-ist,d.geodesic,d.graph,d.grid,d.his,d.histogram,d.info,d.labels,d.legend,d.linegraph,d.mon
-,d.northarrow,d.out.file,d.path,d.polar,d.profile,d.rast.arrow,d.rast.edit,d.rast,d.rast.leg,
-d.rast.num,d.redraw,d.rgb,d.rhumbline,d.shadedmap,d.text,d.thematic.area,d.title,d.to.rast,d.
-vect.chart,d.vect,d.vect.thematic,d.what.rast,d.what.vect,d.where},
+morekeywords=[1]{d.barscale, d.colorlist, d.colortable, d.correlate, d.erase,
+ d.font, d.fontlist, d.geodesic, d.graph, d.grid, d.his, d.histogram, d.info, d.labels,
+ d.legend, d.linegraph, d.mon, d.northarrow, d.out.file, d.path, d.polar, d.profile,
+ d.rast, d.rast.arrow, d.rast.edit, d.rast.leg, d.rast.num, d.redraw, d.rgb, d.rhumbline,
+ d.shadedmap, d.text, d.thematic.area, d.title, d.to.rast, d.vect, d.vect.chart, d.vect.them
+atic, d.what.rast, d.what.vect, d.where},
+\end_layout
+
+\begin_layout Plain Layout
+
+% db
+\end_layout
+
+\begin_layout Plain Layout
+
+morekeywords=[2]{db.columns, db.connect, db.copy, db.createdb, db.databases,
+ db.describe, db.drivers, db.dropcolumn, db.dropdb, db.droptable, db.execute,
+ db.in.ogr, db.login, db.out.ogr, db.select, db.tables, db.test, db.univar},
 \end_layout
 
 \begin_layout Plain Layout
@@ -328,11 +329,12 @@ vect.chart,d.vect,d.vect.thematic,d.what.rast,d.what.vect,d.where},
 
 \begin_layout Plain Layout
 
-morekeywords=[3]{g.access,g.cairocomp,g.copy,g.dirseps,g.extension.all,g.extension,g.fil
-ename,g.findetc,g.findfile,g.gisenv,g.gui.animation,g.gui.dbmgr,g.gui.gcp,g.gui.gmodeler,g.g
-ui,g.gui.iclass,g.gui.mapswipe,g.gui.psmap,g.gui.rlisetup,g.gui.timeline,g.gui.vdigit,g.list,
-g.manual,g.mapset,g.mapsets,g.message,g.mkfontcap,g.parser,g.pnmcomp,g.ppmtopng,g.proj,g.r
-egion,g.remove,g.rename,g.tempfile,g.version},
+morekeywords=[3]{g.access, g.cairocomp, g.copy, g.dirseps, g.extension, g.extension.all
+, g.filename, g.findetc, g.findfile, g.gisenv, g.gui, g.gui.animation, g.gui.dbmgr,
+ g.gui.gcp, g.gui.gmodeler, g.gui.iclass, g.gui.mapswipe, g.gui.psmap, g.gui.rlisetup,
+ g.gui.timeline, g.gui.vdigit, g.list, g.manual, g.mapset, g.mapsets, g.message,
+ g.mkfontcap, g.parser, g.pnmcomp, g.ppmtopng, g.proj, g.region, g.remove, g.rename,
+ g.tempfile, g.version},
 \end_layout
 
 \begin_layout Plain Layout
@@ -342,12 +344,13 @@ egion,g.remove,g.rename,g.tempfile,g.version},
 
 \begin_layout Plain Layout
 
-morekeywords=[4]{i.albedo,i.aster.toar,i.atcorr,i.biomass,i.cca,i.cluster,i.colors.enhanc
-e,i.eb.eta,i.eb.evapfr,i.eb.hsebal01,i.eb.netrad,i.eb.soilheatflux,i.emissivity,i.evapo.mh,i.e
-vapo.pm,i.evapo.pt,i.evapo.time,i.fft,i.gensig,i.gensigset,i.group,i.his.rgb,i.ifft,i.image.mo
-saic,i.in.spotvgt,i.landsat.acca,i.landsat.toar,i.maxlik,i.modis.qc,i.oif,i.ortho.camera,i.or
-tho.elev,i.ortho.rectify,i.pansharpen,i.pca,i.rectify,i.rgb.his,i.segment,i.smap,i.spectral
-,i.target,i.tasscap,i.topo.corr,i.vi,i.zc},
+morekeywords=[4]{i.albedo, i.aster.toar, i.atcorr, i.biomass, i.cca, i.cluster,
+ i.colors.enhance, i.eb.eta, i.eb.evapfr, i.eb.hsebal01, i.eb.netrad, i.eb.soilheatflux,
+ i.emissivity, i.evapo.mh, i.evapo.pm, i.evapo.pt, i.evapo.time, i.fft, i.gensig, i.gensigse
+t, i.group, i.his.rgb, i.ifft, i.image.mosaic, i.in.spotvgt, i.landsat.acca, i.landsat.toar,
+ i.maxlik, i.modis.qc, i.oif, i.ortho.camera, i.ortho.elev, i.ortho.rectify, i.pansharpen,
+ i.pca, i.rectify, i.rgb.his, i.segment, i.smap, i.spectral, i.target, i.tasscap,
+ i.topo.corr, i.vi, i.zc},
 \end_layout
 
 \begin_layout Plain Layout
@@ -357,7 +360,7 @@ tho.elev,i.ortho.rectify,i.pansharpen,i.pca,i.rectify,i.rgb.his,i.segment,i.smap
 
 \begin_layout Plain Layout
 
-morekeywords=[5]{m.cogo,m.measure,m.nviz.image,m.nviz.script,m.proj,m.transform},
+morekeywords=[5]{m.cogo, m.measure, m.nviz.image, m.nviz.script, m.proj, m.transform},
 \end_layout
 
 \begin_layout Plain Layout
@@ -377,26 +380,29 @@ morekeywords=[6]{ps.map},
 
 \begin_layout Plain Layout
 
-morekeywords=[7]{r.basins.fill,r.blend,r.buffer,r.buffer.lowmem,r.carve,r.category,r.circ
-le,r.clump,r.coin,r.colors,r.colors.out,r.colors.stddev,r.composite,r.compress,r.contour,r.
-cost,r.covar,r.cross,r.describe,r.distance,r.drain,r.external,r.external.out,r.fill.dir,r.f
-illnulls,r.flow,r.grow.distance,r.grow,r.gwflow,r.his,r.horizon,r.in.ascii,r.in.aster,r.in.bi
-n,r.in.gdal,r.in.gridatb,r.in.lidar,r.in.mat,r.in.png,r.in.poly,r.in.srtm,r.in.wms,r.in.xyz,r.info,
-r.kappa,r.lake,r.latlong,r.li.cwed,r.li.daemon,r.li.dominance,r.li.edgedensity,r.li,r.li.mpa,r.
-li.mps,r.li.padcv,r.li.padrange,r.li.padsd,r.li.patchdensity,r.li.patchnum,r.li.pielou,r.li.ren
-yi,r.li.richness,r.li.shannon,r.li.shape,r.li.simpson,r.mapcalc,r.mask,r.mfilter,r.mode,r.nei
-ghbors,r.null,r.out.ascii,r.out.bin,r.out.gdal,r.out.gridatb,r.out.mat,r.out.mpeg,r.out.png,r.ou
-t.pov,r.out.ppm,r.out.ppm3,r.out.vrml,r.out.vtk,r.out.xyz,r.pack,r.param.scale,r.patch,r.plane,r.
-profile,r.proj,r.quant,r.quantile,r.random.cells,r.random,r.random.surface,r.reclass.area,
-r.reclass,r.recode,r.region,r.regression.line,r.regression.multi,r.report,r.resamp.bspline
-,r.resamp.filter,r.resamp.interp,r.resamp.rst,r.resamp.stats,r.resample,r.rescale.eq,r.resca
-le,r.rgb,r.ros,r.series.accumulate,r.series,r.series.interp,r.shaded.relief,r.sim.sediment,
-r.sim.water,r.slope.aspect,r.solute.transport,r.spread,r.spreadpath,r.statistics,r.stats,r.
-stats.quantile,r.stats.zonal,r.stream.extract,r.sun,r.sunhours,r.sunmask,r.support,r.suppo
-rt.stats,r.surf.area,r.surf.contour,r.surf.fractal,r.surf.gauss,r.surf.idw,r.surf.idw2,r.surf.r
-andom,r.terraflow,r.texture,r.thin,r.tile,r.tileset,r.timestamp,r.to.rast3,r.to.rast3elev,
-r.to.vect,r.topidx,r.topmodel,r.transect,r.univar,r.unpack,r.uslek,r.usler,r.viewshed,r.vol
-ume,r.walk,r.water.outlet,r.watershed,r.what.color,r.what},
+morekeywords=[7]{r.basins.fill, r.blend, r.buffer, r.buffer.lowmem, r.carve, r.category,
+ r.circle, r.clump, r.coin, r.colors, r.colors.out, r.colors.stddev, r.composite,
+ r.compress, r.contour, r.cost, r.covar, r.cross, r.describe, r.distance, r.drain,
+ r.external, r.external.out, r.fill.dir, r.fillnulls, r.flow, r.grow, r.grow.distance,
+ r.gwflow, r.his, r.horizon, r.in.ascii, r.in.aster, r.in.bin, r.in.gdal, r.in.gridatb,
+ r.in.lidar, r.in.mat, r.in.png, r.in.poly, r.in.srtm, r.in.wms, r.in.xyz, r.info, r.kappa,
+ r.lake, r.latlong, r.li, r.li.cwed, r.li.daemon, r.li.dominance, r.li.edgedensity,
+ r.li.mpa, r.li.mps, r.li.padcv, r.li.padrange, r.li.padsd, r.li.patchdensity, r.li.patchnum,
+ r.li.pielou, r.li.renyi, r.li.richness, r.li.shannon, r.li.shape, r.li.simpson, r.mapcalc,
+ r.mask, r.mfilter, r.mode, r.neighbors, r.null, r.out.ascii, r.out.bin, r.out.gdal,
+ r.out.gridatb, r.out.mat, r.out.mpeg, r.out.png, r.out.pov, r.out.ppm, r.out.ppm3, r.out.vrml,
+ r.out.vtk, r.out.xyz, r.pack, r.param.scale, r.patch, r.plane, r.profile, r.proj,
+ r.quant, r.quantile, r.random, r.random.cells, r.random.surface, r.reclass, r.reclass.are
+a, r.recode, r.region, r.regression.line, r.regression.multi, r.report, r.resamp.bspline,
+ r.resamp.filter, r.resamp.interp, r.resamp.rst, r.resamp.stats, r.resample, r.rescale,
+ r.rescale.eq, r.rgb, r.ros, r.series, r.series.accumulate, r.series.interp, r.shaded.relie
+f, r.sim.sediment, r.sim.water, r.slope.aspect, r.solute.transport, r.spread, r.spreadpath
+, r.statistics, r.stats, r.stats.quantile, r.stats.zonal, r.stream.extract, r.sun,
+ r.sunhours, r.sunmask, r.support, r.support.stats, r.surf.area, r.surf.contour,
+ r.surf.fractal, r.surf.gauss, r.surf.idw, r.surf.idw2, r.surf.random, r.terraflow,
+ r.texture, r.thin, r.tile, r.tileset, r.timestamp, r.to.rast3, r.to.rast3elev, r.to.vect,
+ r.topidx, r.topmodel, r.transect, r.univar, r.unpack, r.uslek, r.usler, r.viewshed,
+ r.volume, r.walk, r.water.outlet, r.watershed, r.what, r.what.color},
 \end_layout
 
 \begin_layout Plain Layout
@@ -406,13 +412,10 @@ ume,r.walk,r.water.outlet,r.watershed,r.what.color,r.what},
 
 \begin_layout Plain Layout
 
-morekeywords=[8]{r3.colors,r3.colors.out,r3.cross.rast,r3.gwflow,r3.in.ascii,r3.in.bin,r3.i
-n.v5d,r3.in.xyz,r3.info,r3.mapcalc,r3.mask,r3.mkdspf,r3.neighbors,r3.null,r3.out.ascii,r3.ou
-t.bin,r3.out.netcdf,r3.out.v5d,r3.out.vtk,r3.retile,r3.stats,r3.support,r3.timestamp,r3.to.ra
-st,r3.univar,r3.colors,r3.colors.out,r3.cross.rast,r3.gwflow,r3.in.ascii,r3.in.bin,r3.in.v5d,
-r3.in.xyz,r3.info,r3.mapcalc,r3.mask,r3.mkdspf,r3.neighbors,r3.null,r3.out.ascii,r3.out.bin,
-r3.out.netcdf,r3.out.v5d,r3.out.vtk,r3.retile,r3.stats,r3.support,r3.timestamp,r3.to.rast,r3.
-univar},
+morekeywords=[8]{r3.colors, r3.colors.out, r3.cross.rast, r3.gwflow, r3.in.ascii,
+ r3.in.bin, r3.in.v5d, r3.in.xyz, r3.info, r3.mapcalc, r3.mask, r3.mkdspf, r3.neighbors,
+ r3.null, r3.out.ascii, r3.out.bin, r3.out.netcdf, r3.out.v5d, r3.out.vtk, r3.retile,
+ r3.stats, r3.support, r3.timestamp, r3.to.rast, r3.univar},
 \end_layout
 
 \begin_layout Plain Layout
@@ -422,13 +425,14 @@ univar},
 
 \begin_layout Plain Layout
 
-morekeywords=[9]{t.connect,t.create,t.info,t.list,t.merge,t.rast.accdetect,t.rast.accumul
-ate,t.rast.aggregate.ds,t.rast.aggregate,t.rast.colors,t.rast.export,t.rast.extract,t.rast.ga
-pfill,t.rast.import,t.rast.list,t.rast.mapcalc,t.rast.neighbors,t.rast.out.vtk,t.rast.series,
-t.rast.to.rast3,t.rast.univar,t.rast3d.extract,t.rast3d.list,t.rast3d.mapcalc,t.rast3d.univar
-,t.register,t.remove,t.rename,t.sample,t.shift,t.snap,t.support,t.topology,t.unregister,t.
-vect.db.select,t.vect.export,t.vect.extract,t.vect.import,t.vect.list,t.vect.observe.strds,t.v
-ect.univar,t.vect.what.strds},
+morekeywords=[9]{t.connect, t.create, t.info, t.list, t.merge, t.rast.accdetect,
+ t.rast.accumulate, t.rast.aggregate, t.rast.aggregate.ds, t.rast.colors, t.rast.export,
+ t.rast.extract, t.rast.gapfill, t.rast.import, t.rast.list, t.rast.mapcalc, t.rast.neighbor
+s, t.rast.out.vtk, t.rast.series, t.rast.to.rast3, t.rast.univar, t.rast3d.extract,
+ t.rast3d.list, t.rast3d.mapcalc, t.rast3d.univar, t.register, t.remove, t.rename,
+ t.sample, t.shift, t.snap, t.support, t.topology, t.unregister, t.vect.db.select,
+ t.vect.export, t.vect.extract, t.vect.import, t.vect.list, t.vect.observe.strds, t.vect.univ
+ar, t.vect.what.strds},
 \end_layout
 
 \begin_layout Plain Layout
@@ -438,22 +442,25 @@ ect.univar,t.vect.what.strds},
 
 \begin_layout Plain Layout
 
-morekeywords=[10]{v.buffer,v.build.all,v.build,v.build.polylines,v.category,v.centroids,
-v.class,v.clean,v.colors,v.colors.out,v.convert.all,v.convert,v.db.addcolumn,v.db.addtable,v.
-db.connect,v.db.dropcolumn,v.db.droprow,v.db.droptable,v.db.join,v.db.reconnect.all,v.db.renam
-ecolumn,v.db.select,v.db.univar,v.db.update,v.delaunay,v.dissolve,v.distance,v.drape,v.edit
-,v.external,v.external.out,v.extract,v.extrude,v.generalize,v.hull,v.in.ascii,v.in.db,v.in.dx
-f,v.in.e00,v.in.geonames,v.in.gns,v.in.lidar,v.in.lines,v.in.mapgen,v.in.ogr,v.in.region,v.in.wfs,
-v.info,v.kcv,v.kernel,v.krige,v.label,v.lidar.correction,v.lidar.edgedetection,v.lidar.grow
-ing,v.lrs.create,v.lrs.label,v.lrs.segment,v.lrs.where,v.mkgrid,v.neighbors,v.net.alloc,v.net.
-allpairs,v.net.bridge,v.net.centrality,v.net.components,v.net.connectivity,v.net.distance,
-v.net.flow,v.net,v.net.iso,v.net.path,v.net.salesman,v.net.spanningtree,v.net.steiner,v.net.tim
-etable,v.net.visibility,v.normal,v.out.ascii,v.out.dxf,v.out.gps,v.out.ogr,v.out.postgis,v.out.
-pov,v.out.svg,v.out.vtk,v.outlier,v.overlay,v.pack,v.parallel,v.patch,v.perturb,v.proj,v.qco
-unt,v.random,v.rast.stats,v.reclass,v.rectify,v.report,v.sample,v.segment,v.select,v.split
-,v.support,v.surf.bspline,v.surf.idw,v.surf.rst,v.timestamp,v.to.3d,v.to.db,v.to.lines,v.to.poin
-ts,v.to.rast,v.to.rast3,v.transform,v.type,v.univar,v.unpack,v.vect.stats,v.vol.rst,v.voronoi
-,v.what,v.what.rast,v.what.rast3,v.what.vect},
+morekeywords=[10]{v.buffer, v.build, v.build.all, v.build.polylines, v.category,
+ v.centroids, v.class, v.clean, v.colors, v.colors.out, v.convert, v.convert.all,
+ v.db.addcolumn, v.db.addtable, v.db.connect, v.db.dropcolumn, v.db.droprow, v.db.droptable,
+ v.db.join, v.db.reconnect.all, v.db.renamecolumn, v.db.select, v.db.univar, v.db.update,
+ v.delaunay, v.dissolve, v.distance, v.drape, v.edit, v.external, v.external.out,
+ v.extract, v.extrude, v.generalize, v.hull, v.in.ascii, v.in.db, v.in.dxf, v.in.e00,
+ v.in.geonames, v.in.gns, v.in.lidar, v.in.lines, v.in.mapgen, v.in.ogr, v.in.region,
+ v.in.wfs, v.info, v.kcv, v.kernel, v.krige, v.label, v.lidar.correction, v.lidar.edgedetec
+tion, v.lidar.growing, v.lrs.create, v.lrs.label, v.lrs.segment, v.lrs.where, v.mkgrid,
+ v.neighbors, v.net, v.net.alloc, v.net.allpairs, v.net.bridge, v.net.centrality,
+ v.net.components, v.net.connectivity, v.net.distance, v.net.flow, v.net.iso, v.net.path,
+ v.net.salesman, v.net.spanningtree, v.net.steiner, v.net.timetable, v.net.visibility,
+ v.normal, v.out.ascii, v.out.dxf, v.out.gps, v.out.ogr, v.out.postgis, v.out.pov, v.out.svg,
+ v.out.vtk, v.outlier, v.overlay, v.pack, v.parallel, v.patch, v.perturb, v.proj,
+ v.qcount, v.random, v.rast.stats, v.reclass, v.rectify, v.report, v.sample, v.segment,
+ v.select, v.split, v.support, v.surf.bspline, v.surf.idw, v.surf.rst, v.timestamp,
+ v.to.3d, v.to.db, v.to.lines, v.to.points, v.to.rast, v.to.rast3, v.transform, v.type,
+ v.univar, v.unpack, v.vect.stats, v.vol.rst, v.voronoi, v.what, v.what.rast, v.what.rast3,
+ v.what.vect},
 \end_layout
 
 \begin_layout Plain Layout
@@ -476,19 +483,20 @@ morekeywords=[11]{region=, zoom=, nsres=, ewres=, MASK=, input=, in=, dsn=,
 
 \begin_layout Plain Layout
 
-morekeywords=[12]{APPDATA,ASCII,CELL,DCELL,DEBUG,FCELL,GISBASE,GISDBASE,GISRC,GI
-S_ERROR_LOG,GIS_LOCK,GRASS,GRASS_ADDON_BASE,GRASS_ADDON_ETC,GRASS_ADDON_PATH,GRA
-SS_BATCH_JOB,GRASS_DB_ENCODING,GRASS_ENCODING,GRASS_ERROR_MAIL,GRASS_FONT,GRASS_
-FONT_CAP,GRASS_GNUPLOT,GRASS_GUI,GRASS_HTML_BROWSER,GRASS_INT_ZLIB,GRASS_MESSAGE
-_FORMAT,GRASS_MOUSE_BUTTON,GRASS_NO_GLX_PBUFFERS,GRASS_NO_GLX_PIXMAPS,GRASS_OVER
-WRITE,GRASS_PAGER,GRASS_PERL,GRASS_PYTHON,GRASS_REGION,GRASS_RENDER_FRAME,GRASS_
-RENDER_HEIGHT,GRASS_RENDER_IMMEDIATE,GRASS_RENDER_LINE_WIDTH,GRASS_RENDER_TEXT_S
-IZE,GRASS_RENDER_WIDTH,GRASS_SH,GRASS_SIGSEGV_ON_ERROR,GRASS_SKIP_MAPSET_OWNER_C
-HECK,GRASS_UI_TERM,GRASS_VECTOR_EXTERNAL_IGNORE,GRASS_VECTOR_EXTERNAL_IMMEDIATE,
-GRASS_VECTOR_LOWMEM,GRASS_VECTOR_OGR,GRASS_VECTOR_TEMPORARY,GRASS_VERBOSE,GRASS_
-VERSION,GRASS_WXBUNDLED,GRASS_XTERM,GRASS_ZLIB_LEVEL,GUI,LOCATION,LOCATION_NAME,
-MAPSET,OMP_NUM_THREADS,OVERWRITE,SIGSEGV,TEMP,TMP,TMPDIR,WIND_OVERRIDE,WX_DEBUG,
-wxGUI},
+morekeywords=[12]{APPDATA, ASCII, CELL, DCELL, DEBUG, FCELL, GISBASE, GISDBASE,
+ GISRC, GIS_ERROR_LOG, GIS_LOCK, GRASS_ADDON_BASE, GRASS_ADDON_ETC, GRASS_ADDON_
+PATH, GRASS_BATCH_JOB, GRASS_DB_ENCODING, GRASS_ENCODING, GRASS_ERROR_MAIL,
+ GRASS_FONT, GRASS_FONT_CAP, GRASS_GNUPLOT, GRASS_GUI, GRASS_HTML_BROWSER,
+ GRASS_INT_ZLIB, GRASS_MESSAGE_FORMAT, GRASS_MOUSE_BUTTON, GRASS_NO_GLX_PBUFFERS
+, GRASS_NO_GLX_PIXMAPS, GRASS_OVERWRITE, GRASS_PAGER, GRASS_PERL, GRASS_PYTHON,
+ GRASS_REGION, GRASS_RENDER_FRAME, GRASS_RENDER_HEIGHT, GRASS_RENDER_IMMEDIATE,
+ GRASS_RENDER_LINE_WIDTH, GRASS_RENDER_TEXT_SIZE, GRASS_RENDER_WIDTH, GRASS_SH,
+ GRASS_SIGSEGV_ON_ERROR, GRASS_SKIP_MAPSET_OWNER_CHECK, GRASS_UI_TERM, GRASS_VEC
+TOR_EXTERNAL_IGNORE, GRASS_VECTOR_EXTERNAL_IMMEDIATE, GRASS_VECTOR_LOWMEM,
+ GRASS_VECTOR_OGR, GRASS_VECTOR_TEMPORARY, GRASS_VERBOSE, GRASS_VERSION,
+ GRASS_WXBUNDLED, GRASS_XTERM, GRASS_ZLIB_LEVEL, GUI, LOCATION, LOCATION_NAME,
+ MAPSET, OMP_NUM_THREADS, OVERWRITE, SIGSEGV, TEMP, TMP, TMPDIR, WIND_OVERRIDE,
+ WX_DEBUG, wxGUI},
 \end_layout
 
 \begin_layout Plain Layout

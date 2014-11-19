@@ -434,6 +434,25 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Section
+To do
+\end_layout
+
+\begin_layout Itemize
+add code examples in 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sub:Code Listings - Example"
+
+\end_inset
+
+, such as a Python script
+\end_layout
+
+\begin_layout Itemize
+more...
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
@@ -555,18 +574,9 @@ filename "lyx_childs/environment_variables.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "lyx_childs/code_listings.lyx"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
