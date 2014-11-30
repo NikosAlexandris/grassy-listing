@@ -43,8 +43,8 @@
 \renewcommand{\lstlistlistingname}{List of Listings}% Fix the List of Listings title
 
 \AtBeginDocument{% Beginning of AtBegin --->
-\input{../listings/grassy_definitions}
-\input{../listings/grassy_lstset}
+\input{grassy_definitions}
+\input{grassy_lstset}
 
 }% see: <http://tex.stackexchange.com/a/145868/8272>
 
@@ -176,7 +176,7 @@ name "sub:Code Listings - Example"
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "/home/nik/archive/LyX/grassy-listing/listings/modules"
+filename "/home/nik/archive/LyX/grassy-listing/for_listings/modules"
 
 \end_inset
 

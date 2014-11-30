@@ -8,12 +8,9 @@
 \usepackage{color}
 
 % gray
-\definecolor{lightgray}{gray}{0.6}
-\definecolor{lightgray2}{gray}{0.7}
-\definecolor{lightgray3}{gray}{0.8}
-\definecolor{lightgray4}{gray}{0.9}
-\definecolor{lightgray5}{gray}{0.95}
-
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{lightgray3}{gray}{0.95}
+\definecolor{lightgray4}{gray}{0.8}
 % red
 \definecolor{darkred}{rgb}{0.5,0.3,0.3}
 
