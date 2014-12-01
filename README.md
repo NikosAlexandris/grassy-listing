@@ -8,4 +8,4 @@ highlighting support for GRASS-GIS code.
 To Do
 =====
 
-* extract `lstdefinelanguage` and `lstset` in external files
+* ~~extract `lstdefinelanguage` and `lstset` in external files~~
