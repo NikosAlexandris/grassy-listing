@@ -1,0 +1,196 @@
+
+\section{Vector commands (v.{*})}
+\begin{description}
+\item [{v.buffer}] Creates a buffer around vector features of given type.
+\item [{v.build.all}] Rebuilds topology on all vector maps in the current
+mapset.
+\item [{v.build}] Creates topology for vector map.
+\item [{v.build.polylines}] Builds polylines from lines or boundaries.
+\item [{v.category}] Attaches, deletes or reports vector categories to
+map geometry.
+\item [{v.centroids}] Adds missing centroids to closed boundaries.
+\item [{v.class}] Classifies attribute data, e.g. for thematic mapping
+\item [{v.clean}] Toolset for cleaning topology of vector map.
+\item [{v.colors}] Creates/modifies the color table associated with a vector
+map.
+\item [{v.colors.out}] Exports the color table associated with a vector
+map.
+\item [{v.convert.all}] Converts all older versions of GRASS vector maps
+in current mapset to current format.
+\item [{v.convert}] Imports older versions of GRASS vector maps.
+\item [{v.db.addcolumn}] Adds one or more columns to the attribute table
+connected to a given vector map.
+\item [{v.db.addtable}] Creates and connects a new attribute table to a
+given layer of an existing vector map.
+\item [{v.db.connect}] Prints/sets DB connection for a vector map to attribute
+table.
+\item [{v.db.dropcolumn}] Drops a column from the attribute table connected
+to a given vector map.
+\item [{v.db.droprow}] Removes a vector feature from a vector map through
+attribute selection.
+\item [{v.db.droptable}] Removes existing attribute table of a vector map.
+\item [{v.db.join}] Joins a database table to a vector map table.
+\item [{v.db.reconnect.all}] Reconnects attribute tables for all vector
+maps from the current mapset to a new database.
+\item [{v.db.renamecolumn}] Renames a column in the attribute table connected
+to a given vector map.
+\item [{v.db.select}] Prints vector map attributes.
+\item [{v.db.univar}] Calculates univariate statistics on selected table
+column for a GRASS vector map.
+\item [{v.db.update}] Updates a column in the attribute table connected
+to a vector map.
+\item [{v.delaunay}] Creates a Delaunay triangulation from an input vector
+map containing points or centroids.
+\item [{v.dissolve}] Dissolves boundaries between adjacent areas sharing
+a common category number or attribute.
+\item [{v.distance}] Finds the nearest element in vector map 'to' for elements
+in vector map 'from'.
+\item [{v.drape}] Converts 2D vector features to 3D by sampling of elevation
+raster map.
+\item [{v.edit}] Edits a vector map, allows adding, deleting and modifying
+selected vector features.
+\item [{v.external}] Creates a new pseudo-vector map as a link to an OGR-supported
+layer or a PostGIS feature table.
+\item [{v.external.out}] Defines vector output format.
+\item [{v.extract}] Selects vector features from an existing vector map
+and creates a new vector map containing only the selected features.
+\item [{v.extrude}] Extrudes flat vector features to 3D vector features
+with defined height.
+\item [{v.generalize}] Performs vector based generalization.
+\item [{v.hull}] Produces a 2D/3D convex hull for a given vector map.
+\item [{v.in.ascii}] Creates a vector map from an ASCII points file or
+ASCII vector file.
+\item [{v.in.db}] Creates new vector (points) map from database table containing
+coordinates.
+\item [{v.in.dxf}] Converts file in DXF format to GRASS vector map.
+\item [{v.in.e00}] Imports E00 file into a vector map.
+\item [{v.in.geonames}] Imports geonames.org country files into a vector
+points map.
+\item [{v.in.gns}] Imports US-NGA GEOnet Names Server (GNS) country files
+into a GRASS vector points map.
+\item [{v.in.lidar}] Converts LAS LiDAR point clouds to a GRASS vector
+map with libLAS.
+\item [{v.in.lines}] Imports ASCII x,y{[},z{]} coordinates as a series
+of lines.
+\item [{v.in.mapgen}] Imports Mapgen or Matlab-ASCII vector maps into GRASS.
+\item [{v.in.ogr}] Imports vector data into a GRASS vector map using OGR
+library.
+\item [{v.in.region}] Creates a vector polygon from the current region
+extent.
+\item [{v.in.wfs}] Imports GetFeature from a WFS server.
+\item [{v.info}] Outputs basic information about a vector map.
+\item [{v.kcv}] Randomly partition points into test/train sets.
+\item [{v.kernel}] Generates a raster density map from vector points map.
+\item [{v.krige}] Performs ordinary or block kriging for vector maps.
+\item [{v.label}] Creates paint labels for a vector map from attached attributes.
+\item [{v.lidar.correction}] Correction of the v.lidar.growing output.
+It is the last of the three algorithms for LIDAR filtering.
+\item [{v.lidar.edgedetection}] Detects the object's edges from a LIDAR
+data set.
+\item [{v.lidar.growing}] Building contour determination and Region Growing
+algorithm for determining the building inside
+\item [{v.lrs.create}] Creates a linear reference system.
+\item [{v.lrs.label}] Creates stationing from input lines, and linear reference
+system.
+\item [{v.lrs.segment}] Creates points/segments from input lines, linear
+reference system and positions read from stdin or a file.
+\item [{v.lrs.where}] Finds line id and real km+offset for given points
+in vector map using linear reference system.
+\item [{v.mkgrid}] Creates a vector map of a user-defined grid.
+\item [{v.neighbors}] Neighborhood analysis tool for vector point maps.
+\item [{v.net.alloc}] Allocates subnets for nearest centers (direction
+from center).
+\item [{v.net.allpairs}] Computes the shortest path between all pairs of
+nodes in the network.
+\item [{v.net.bridge}] Computes bridges and articulation points in the
+network.
+\item [{v.net.centrality}] Computes degree, centrality, betweeness, closeness
+and eigenvector centrality measures in the network.
+\item [{v.net.components}] Computes strongly and weakly connected components
+in the network.
+\item [{v.net.connectivity}] Computes vertex connectivity between two sets
+of nodes in the network.
+\item [{v.net.distance}] Computes shortest distance via the network between
+the given sets of features.
+\item [{v.net.flow}] Computes the maximum flow between two sets of nodes
+in the network.
+\item [{v.net}] Performs network maintenance.
+\item [{v.net.iso}] Splits net by cost isolines.
+\item [{v.net.path}] Finds shortest path on vector network.
+\item [{v.net.salesman}] Creates a cycle connecting given nodes (Traveling
+salesman problem).
+\item [{v.net.spanningtree}] Computes minimum spanning tree for the network.
+\item [{v.net.steiner}] Creates Steiner tree for the network and given
+terminals.
+\item [{v.net.timetable}] Finds shortest path using timetables.
+\item [{v.net.visibility}] Performs visibility graph construction.
+\item [{v.normal}] Tests for normality for vector points.
+\item [{v.out.ascii}] Exports a vector map to a GRASS ASCII vector representation.
+\item [{v.out.dxf}] Exports vector map to DXF file format.
+\item [{v.out.gps}] Exports a vector map to a GPS receiver or file format
+supported by GPSBabel.
+\item [{v.out.ogr}] Exports a vector map layer to any of the supported
+OGR vector formats.
+\item [{v.out.postgis}] Exports a vector map layer to PostGIS feature table.
+\item [{v.out.pov}] Converts GRASS x,y,z points to POV-Ray x,z,y format.
+\item [{v.out.svg}] Exports a vector map to SVG file.
+\item [{v.out.vtk}] Converts a vector map to VTK ASCII output.
+\item [{v.outlier}] Removes outliers from vector point data.
+\item [{v.overlay}] Overlays two vector maps.
+\item [{v.pack}] Packs up a vector map and support files for copying.
+\item [{v.parallel}] Creates parallel line to input vector lines.
+\item [{v.patch}] Creates a new vector map by combining other vector maps.
+\item [{v.perturb}] Random location perturbations of vector points.
+\item [{v.proj}] Re-projects a vector map from one location to the current
+location.
+\item [{v.qcount}] Indices for quadrat counts of sites lists.
+\item [{v.random}] Generates random 2D/3D vector points.
+\item [{v.rast.stats}] Calculates univariate statistics from a raster map
+based on a vector map and uploads statistics to new attribute columns.
+\item [{v.reclass}] Changes vector category values for an existing vector
+map according to results of SQL queries or a value in attribute table
+column.
+\item [{v.rectify}] Rectifies a vector by computing a coordinate transformation
+for each object in the vector based on the control points.
+\item [{v.report}] Reports geometry statistics for vector maps.
+\item [{v.sample}] Samples a raster map at vector point locations.
+\item [{v.segment}] Creates points/segments from input vector lines and
+positions.
+\item [{v.select}] Selects features from vector map (A) by features from
+other vector map (B).
+\item [{v.split}] Splits vector lines to shorter segments.
+\item [{v.support}] Updates vector map metadata.
+\item [{v.surf.bspline}] Performs bicubic or bilinear spline interpolation
+with Tykhonov regularization.
+\item [{v.surf.idw}] Provides surface interpolation from vector point data
+by Inverse Distance Squared Weighting.
+\item [{v.surf.rst}] Performs surface interpolation from vector points
+map by splines.
+\item [{v.timestamp}] Modifies a timestamp for a vector map.
+\item [{v.to.3d}] Performs transformation of 2D vector features to 3D.
+\item [{v.to.db}] Populates attribute values from vector features.
+\item [{v.to.lines}] Converts vector polygons or points to lines.
+\item [{v.to.points}] Creates points along input lines in new vector map
+with 2 layers.
+\item [{v.to.rast}] Converts (rasterize) a vector map into a raster map.
+\item [{v.to.rast3}] Converts a vector map (only points) into a 3D raster
+map.
+\item [{v.transform}] Performs an affine transformation (shift, scale and
+rotate) on vector map.
+\item [{v.type}] Changes type of vector features.
+\item [{v.univar}] Calculates univariate statistics for attribute.
+\item [{v.unpack}] Unpacks a vector map packed with v.pack.
+\item [{v.vect.stats}] Count points in areas, calculate statistics from
+point attributes.
+\item [{v.vol.rst}] Interpolates point data to a 3D raster map using regularized
+spline with tension (RST) algorithm.
+\item [{v.voronoi}] Creates a Voronoi diagram in current region from an
+input vector map containing points or centroids.
+\item [{v.what}] Queries a vector map at given locations.
+\item [{v.what.rast}] Uploads raster values at positions of vector points
+to the table.
+\item [{v.what.rast3}] Uploads 3D raster values at positions of vector
+points to the table.
+\item [{v.what.vect}] Uploads vector values at positions of vector points
+to the table.\end{description}
+

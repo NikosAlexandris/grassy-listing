@@ -1,0 +1,269 @@
+
+\section{Raster commands (r.{*})}
+\begin{description}
+\item [{r.basins.fill}] Generates watershed subbasins raster map.
+\item [{r.blend}] Blends color components of two raster maps by a given
+ratio.
+\item [{r.buffer}] Creates a raster map showing buffer zones surrounding
+cells that contain non-NULL category values.
+\item [{r.buffer.lowmem}] Creates a raster map showing buffer zones surrounding
+cells that contain non-NULL category values.
+\item [{r.carve}] Generates stream channels.
+\item [{r.category}] Manages category values and labels associated with
+user-specified raster map layers.
+\item [{r.circle}] Creates a raster map containing concentric rings around
+a given point.
+\item [{r.clump}] Recategorizes data in a raster map by grouping cells
+that form physically discrete areas into unique categories.
+\item [{r.coin}] Tabulates the mutual occurrence (coincidence) of categories
+for two raster map layers.
+\item [{r.colors}] Creates/modifies the color table associated with a raster
+map.
+\item [{r.colors.out}] Exports the color table associated with a raster
+map.
+\item [{r.colors.stddev}] Sets color rules based on stddev from a raster
+map's mean value.
+\item [{r.composite}] Combines red, green and blue raster maps into a single
+composite raster map.
+\item [{r.compress}] Compresses and decompresses raster maps.
+\item [{r.contour}] Produces a vector map of specified contours from a
+raster map.
+\item [{r.cost}] Creates a raster map showing the cumulative cost of moving
+between different geographic locations on an input raster map whose
+cell category values represent cost.
+\item [{r.covar}] Outputs a covariance/correlation matrix for user-specified
+raster map layer(s).
+\item [{r.cross}] Creates a cross product of the category values from multiple
+raster map layers.
+\item [{r.describe}] Prints terse list of category values found in a raster
+map layer.
+\item [{r.distance}] Locates the closest points between objects in two
+raster maps.
+\item [{r.drain}] Traces a flow through an elevation model or cost surface
+on a raster map.
+\item [{r.external}] Links GDAL supported raster data as a pseudo GRASS
+raster map.
+\item [{r.external.out}] Defines raster output format utilizing GDAL library.
+\item [{r.fill.dir}] Filters and generates a depressionless elevation map
+and a flow direction map from a given elevation raster map.
+\item [{r.fillnulls}] Fills no-data areas in raster maps using spline interpolation.
+\item [{r.flow}] Constructs flowlines.
+\item [{r.grow.distance}] Generates a raster map containing distances to
+nearest raster features.
+\item [{r.grow}] Generates a raster map layer with contiguous areas grown
+by one cell.
+\item [{r.gwflow}] Numerical calculation program for transient, confined
+and unconfined groundwater flow in two dimensions.
+\item [{r.his}] Generates red, green and blue raster map layers combining
+hue, intensity and saturation (HIS) values from user-specified input
+raster map layers.
+\item [{r.horizon}] Computes horizon angle height from a digital elevation
+model.
+\item [{r.in.ascii}] Converts a GRASS ASCII raster file to binary raster
+map.
+\item [{r.in.aster}] Georeference, rectify, and import Terra-ASTER imagery
+and relative DEMs using gdalwarp.
+\item [{r.in.bin}] Import a binary raster file into a GRASS raster map
+layer.
+\item [{r.in.gdal}] Imports raster data into a GRASS raster map using GDAL
+library.
+\item [{r.in.gridatb}] Imports GRIDATB.FOR map file (TOPMODEL) into a GRASS
+raster map.
+\item [{r.in.lidar}] Creates a raster map from LAS LiDAR points using univariate
+statistics.
+\item [{r.in.mat}] Imports a binary MAT-File(v4) to a GRASS raster.
+\item [{r.in.png}] Imports non-georeferenced PNG format image.
+\item [{r.in.poly}] Creates raster maps from ASCII polygon/line/point data
+files.
+\item [{r.in.srtm}] Imports SRTM HGT files into raster map.
+\item [{r.in.wms}] Downloads and imports data from WMS/WMTS/NASA OnEarth
+server.
+\item [{r.in.xyz}] Creates a raster map from an assemblage of many coordinates
+using univariate statistics.
+\item [{r.info}] Outputs basic information about a raster map.
+\item [{r.kappa}] Calculates error matrix and kappa parameter for accuracy
+assessment of classification result.
+\item [{r.lake}] Fills lake at given point to given level.
+\item [{r.latlong}] Creates a latitude/longitude raster map.
+\item [{r.li.cwed}] Calculates contrast weighted edge density index on
+a raster map
+\item [{r.li.daemon}] Support module for r.li landscape index calculations.
+\item [{r.li.dominance}] Calculates dominance's diversity index on a raster
+map
+\item [{r.li.edgedensity}] Calculates edge density index on a raster map,
+using a 4 neighbour algorithm
+\item [{r.li}]~
+\item [{r.li.mpa}] Calculates mean pixel attribute index on a raster map
+\item [{r.li.mps}] Calculates mean patch size index on a raster map, using
+a 4 neighbour algorithm
+\item [{r.li.padcv}] Calculates coefficient of variation of patch area
+on a raster map
+\item [{r.li.padrange}] Calculates range of patch area size on a raster
+map
+\item [{r.li.padsd}] Calculates standard deviation of patch area a raster
+map
+\item [{r.li.patchdensity}] Calculates patch density index on a raster
+map, using a 4 neighbour algorithm
+\item [{r.li.patchnum}] Calculates patch number index on a raster map,
+using a 4 neighbour algorithm.
+\item [{r.li.pielou}] Calculates Pielou's diversity index on a raster map
+\item [{r.li.renyi}] Calculates Renyi's diversity index on a raster map
+\item [{r.li.richness}] Calculates richness index on a raster map
+\item [{r.li.shannon}] Calculates Shannon's diversity index on a raster
+map
+\item [{r.li.shape}] Calculates shape index on a raster map
+\item [{r.li.simpson}] Calculates Simpson's diversity index on a raster
+map
+\item [{r.mapcalc}] Raster map calculator.
+\item [{r.mask}] Creates a MASK for limiting raster operation.
+\item [{r.mfilter}] Performs raster map matrix filter.
+\item [{r.mode}] Finds the mode of values in a cover map within areas assigned
+the same category value in a user-specified base map.
+\item [{r.neighbors}] Makes each cell category value a function of the
+category values assigned to the cells around it, and stores new cell
+values in an output raster map layer.
+\item [{r.null}] Manages NULL-values of given raster map.
+\item [{r.out.ascii}] Converts a raster map layer into a GRASS ASCII text
+file.
+\item [{r.out.bin}] Exports a GRASS raster to a binary array.
+\item [{r.out.gdal}] Exports GRASS raster maps into GDAL supported formats.
+\item [{r.out.gridatb}] Exports GRASS raster map to GRIDATB.FOR map file
+(TOPMODEL).
+\item [{r.out.mat}] Exports a GRASS raster to a binary MAT-File.
+\item [{r.out.mpeg}] Converts raster map series to MPEG movie.
+\item [{r.out.png}] Export a GRASS raster map as a non-georeferenced PNG
+image.
+\item [{r.out.pov}] Converts a raster map layer into a height-field file
+for POV-Ray.
+\item [{r.out.ppm}] Converts a GRASS raster map to a PPM image file.
+\item [{r.out.ppm3}] Converts 3 GRASS raster layers (R,G,B) to a PPM image
+file.
+\item [{r.out.vrml}] Exports a raster map to the Virtual Reality Modeling
+Language (VRML).
+\item [{r.out.vtk}] Converts raster maps into the VTK-ASCII format.
+\item [{r.out.xyz}] Exports a raster map to a text file as x,y,z values
+based on cell centers.
+\item [{r.pack}] Packs up a raster map and support files for copying.
+\item [{r.param.scale}] Extracts terrain parameters from a DEM.
+\item [{r.patch}] Creates a composite raster map layer by using known category
+values from one (or more) map layer(s) to fill in areas of \textquotedbl{}no
+data\textquotedbl{} in another map layer.
+\item [{r.plane}] Creates raster plane map given dip (inclination), aspect
+(azimuth) and one point.
+\item [{r.profile}] Outputs the raster map layer values lying on user-defined
+line(s).
+\item [{r.proj}] Re-projects a raster map from given location to the current
+location.
+\item [{r.quant}] Produces the quantization file for a floating-point map.
+\item [{r.quantile}] Compute quantiles using two passes.
+\item [{r.random.cells}] Generates random cell values with spatial dependence.
+\item [{r.random}] Creates a raster map layer and vector point map containing
+randomly located points.
+\item [{r.random.surface}] Generates random surface(s) with spatial dependence.
+\item [{r.reclass.area}] Reclasses a raster map greater or less than user
+specified area size (in hectares).
+\item [{r.reclass}] Reclassify raster map based on category values.
+\item [{r.recode}] Recodes categorical raster maps.
+\item [{r.region}] Sets the boundary definitions for a raster map.
+\item [{r.regression.line}] Calculates linear regression from two raster
+maps: y = a + b{*}x.
+\item [{r.regression.multi}] Calculates multiple linear regression from
+raster maps.
+\item [{r.report}] Reports statistics for raster maps.
+\item [{r.resamp.bspline}] Performs bilinear or bicubic spline interpolation
+with Tykhonov regularization.
+\item [{r.resamp.filter}] Resamples raster map layers using an analytic
+kernel.
+\item [{r.resamp.interp}] Resamples raster map to a finer grid using interpolation.
+\item [{r.resamp.rst}] Reinterpolates and optionally computes topographic
+analysis from input raster map to a new raster map (possibly with
+different resolution) using regularized spline with tension and smoothing.
+\item [{r.resamp.stats}] Resamples raster map layers to a coarser grid
+using aggregation.
+\item [{r.resample}] GRASS raster map layer data resampling capability.
+\item [{r.rescale.eq}] Rescales histogram equalized the range of category
+values in a raster map layer.
+\item [{r.rescale}] Rescales the range of category values in a raster map
+layer.
+\item [{r.rgb}] Splits a raster map into red, green and blue maps.
+\item [{r.ros}] Generates rate of spread raster maps.
+\item [{r.series.accumulate}] Makes each output cell value a accumulationfunction
+of the values assigned to the corresponding cells in the input raster
+map layers.
+\item [{r.series}] Makes each output cell value a function of the values
+assigned to the corresponding cells in the input raster map layers.
+\item [{r.series.interp}] Interpolate raster maps located (temporal or
+spatial) in between input raster maps at specific sampling positions.
+\item [{r.shaded.relief}] Creates shaded relief map from an elevation map
+(DEM).
+\item [{r.sim.sediment}] Sediment transport and erosion/deposition simulation
+using path sampling method (SIMWE).
+\item [{r.sim.water}] Overland flow hydrologic simulation using path sampling
+method (SIMWE).
+\item [{r.slope.aspect}] Generates raster maps of slope, aspect, curvatures
+and partial derivatives from an elevation raster map.
+\item [{r.solute.transport}] Numerical calculation program for transient,
+confined and unconfined solute transport in two dimensions
+\item [{r.spread}] Simulates elliptically anisotropic spread.
+\item [{r.spreadpath}] Recursively traces the least cost path backwards
+to cells from which the cumulative cost was determined.
+\item [{r.statistics}] Calculates category or object oriented statistics.
+\item [{r.stats}] Generates area statistics for raster map.
+\item [{r.stats.quantile}] Compute category quantiles using two passes.
+\item [{r.stats.zonal}] Calculates category or object oriented statistics
+(accumulator-based statistics).
+\item [{r.stream.extract}] Performs stream network extraction.
+\item [{r.sun}] Solar irradiance and irradiation model.
+\item [{r.sunhours}] Calculates solar elevation, solar azimuth, and sun
+hours.
+\item [{r.sunmask}] Calculates cast shadow areas from sun position and
+elevation raster map.
+\item [{r.support}] Allows creation and/or modification of raster map layer
+support files.
+\item [{r.support.stats}] Update raster map statistics
+\item [{r.surf.area}] Prints estimation of surface area for raster map.
+\item [{r.surf.contour}] Generates surface raster map from rasterized contours.
+\item [{r.surf.fractal}] Creates a fractal surface of a given fractal dimension.
+\item [{r.surf.gauss}] Generates a raster map using gaussian random number
+generator.
+\item [{r.surf.idw}] Surface interpolation utility for raster map.
+\item [{r.surf.idw2}] Surface generation program.
+\item [{r.surf.random}] Produces a raster surface map of uniform random
+deviates with defined range.
+\item [{r.terraflow}] Flow computation for massive grids (float version).
+\item [{r.texture}] Generate images with textural features from a raster
+map.
+\item [{r.thin}] Thins non-zero cells that denote linear features in a
+raster map layer.
+\item [{r.tile}] Splits a raster map into tiles.
+\item [{r.tileset}] Produces tilings of the source projection for use in
+the destination region and projection.
+\item [{r.timestamp}] Modifies a timestamp for a raster map.
+\item [{r.to.rast3}] Converts 2D raster map slices to one 3D raster volume
+map.
+\item [{r.to.rast3elev}] Creates a 3D volume map based on 2D elevation
+and value raster maps.
+\item [{r.to.vect}] Converts a raster map into a vector map.
+\item [{r.topidx}] Creates a topographic index raster map from an elevation
+raster map.
+\item [{r.topmodel}] Simulates TOPMODEL which is a physically based hydrologic
+model.
+\item [{r.transect}] Outputs raster map layer values lying along user defined
+transect line(s).
+\item [{r.univar}] Calculates univariate statistics from the non-null cells
+of a raster map.
+\item [{r.unpack}] Unpacks a raster map packed with r.pack.
+\item [{r.uslek}] Computes USLE Soil Erodibility Factor (K).
+\item [{r.usler}] Computes USLE R factor, Rainfall erosivity index.
+\item [{r.viewshed}] Computes the viewshed of a point on an elevation raster
+map.
+\item [{r.volume}] Calculates the volume of data \textquotedbl{}clumps\textquotedbl{}.
+\item [{r.walk}] Outputs a raster map showing the anisotropic cumulative
+cost.
+\item [{r.water.outlet}] Creates watershed basins from a drainage direction
+map.
+\item [{r.watershed}] Calculates hydrological parameters and RUSLE factors.
+\item [{r.what.color}] Queries colors for a raster map layer.
+\item [{r.what}] Queries raster maps on their category values and category
+labels.\end{description}
+

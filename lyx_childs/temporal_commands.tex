@@ -1,0 +1,75 @@
+
+\section{Temporal commands (t.{*})}
+\begin{description}
+\item [{t.connect}] Prints/sets general temporal GIS database connection
+for current mapset.
+\item [{t.create}] Creates a space time dataset.
+\item [{t.info}] Lists information about space time datasets and maps.
+\item [{t.list}] Lists space time datasets and maps registered in the temporal
+database.
+\item [{t.merge}] Merges several space time datasets into a single space
+time dataset.
+\item [{t.rast.accdetect}] Detects accumulation patterns in temporally
+accumulated space time raster datasets created by t.rast.accumulate.
+\item [{t.rast.accumulate}] Computes cyclic accumulations of a space time
+raster dataset.
+\item [{t.rast.aggregate.ds}] Aggregates data of an existing space time
+raster dataset using the time intervals of a second space time dataset.
+\item [{t.rast.aggregate}] Aggregates temporally the maps of a space time
+raster dataset by a user defined granularity.
+\item [{t.rast.colors}] Creates/modifies the color table associated with
+each raster map of the space time raster dataset.
+\item [{t.rast.export}] Exports space time raster dataset.
+\item [{t.rast.extract}] Extracts a subset of a space time raster datasets.
+\item [{t.rast.gapfill}] Replaces gaps in a space time raster dataset with
+interpolated raster maps.
+\item [{t.rast.import}] Imports space time raster dataset.
+\item [{t.rast.list}] Lists registered maps of a space time raster dataset.
+\item [{t.rast.mapcalc}] Performs spatio-temporal mapcalc expressions on
+temporally sampled maps of space time raster datasets.
+\item [{t.rast.neighbors}] Performs a neighborhood analysis for each map
+in a space time raster dataset.
+\item [{t.rast.out.vtk}] Exports space time raster dataset as VTK time
+series.
+\item [{t.rast.series}] Performs different aggregation algorithms from
+r.series on all or a subset of raster maps in a space time raster
+dataset.
+\item [{t.rast.to.rast3}] Converts a space time raster dataset into a raster3d
+map.
+\item [{t.rast.univar}] Calculates univariate statistics from the non-null
+cells for each registered raster map of a space time raster dataset.
+\item [{t.rast3d.extract}] Extracts a subset of a space time 3D raster
+dataset.
+\item [{t.rast3d.list}] Lists registered maps of a space time raster3d
+dataset.
+\item [{t.rast3d.mapcalc}] Performs r3.mapcalc expressions on maps of sampled
+space time 3D raster datasets.
+\item [{t.rast3d.univar}] Calculates univariate statistics from the non-null
+cells for each registered raster3d map of a space time raster3d dataset.
+\item [{t.register}] Registers raster, vector and raster3d maps in a space
+time datasets.
+\item [{t.remove}] Removes space time datasets from temporal database.
+\item [{t.rename}] Renames a space time dataset
+\item [{t.sample}] Samples the input space time dataset(s) with a sample
+space time dataset and print the result to stdout.
+\item [{t.shift}] Shifts temporally the maps of a space time dataset.
+\item [{t.snap}] Snaps temporally the maps of a space time dataset.
+\item [{t.support}] Modifies the metadata of a space time dataset.
+\item [{t.topology}] Lists temporal topology of a space time dataset.
+\item [{t.unregister}] Unregisters raster, vector and raster3d maps from
+the temporal database or a specific space time dataset.
+\item [{t.vect.db.select}] Prints attributes of vector maps registered
+in a space time vector dataset.
+\item [{t.vect.export}] Exports a space time vector dataset as GRASS GIS
+specific archive file.
+\item [{t.vect.extract}] Extracts a subset of a space time vector dataset.
+\item [{t.vect.import}] Imports a space time vector dataset from a GRASS
+GIS specific archive file.
+\item [{t.vect.list}] Lists registered maps of a space time vector dataset.
+\item [{t.vect.observe.strds}] Observes specific locations in a space time
+raster dataset over a period of time using vector points.
+\item [{t.vect.univar}] Calculates univariate statistics of attributes
+for each registered vector map of a space time vector dataset
+\item [{t.vect.what.strds}] Stores raster map values at spatial and temporal
+positions of vector points as vector attributes.\end{description}
+

@@ -1,0 +1,490 @@
+
+\section{Add-Ons}
+
+\begin{lstlisting}
+for D in *; do echo "${D}" |tr "\n" "|" && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; don
+\end{lstlisting}
+
+
+d.correlate|
+
+Prints a graph of the correlation between raster maps (in pairs).
+
+d.out.file|
+
+Saves the contents of the active display monitor to a graphics file.
+
+d.polar|d.rast.edit|
+
+Edits cell values in a raster map.
+
+d.rast.leg|
+
+Displays a raster map and its legend on a graphics window
+
+d.redraw|
+
+Redraws the content of currently selected monitor.
+
+d.shadedmap|
+
+Drapes a color raster over a shaded relief map.
+
+d.to.rast|
+
+Saves the contents of the active display monitor to a raster map.
+
+d.vect.thematic|
+
+Displays thematic vector map
+
+d.what.rast|
+
+Allows the user to interactively query raster map layers at user-selected
+locations.
+
+d.what.vect|
+
+Allows the user to interactively query vector map layers at user-selected
+locations.
+
+db.dropcolumn|
+
+Drops a column from selected attribute table.
+
+db.droptable|
+
+Drops an attribute table.
+
+db.in.ogr|db.out.ogr|
+
+Exports attribute tables into various formats.
+
+db.test|
+
+Test database driver, database must exist and set by db.connect.
+
+db.univar|
+
+Calculates univariate statistics on selected table column.
+
+g.extension|
+
+\#\% label: Maintains GRASS Addons extensions in local GRASS installation.
+
+g.extension.all|
+
+\#\% label: Rebuilds or removes all locally installed GRASS Addons
+extensions.
+
+g.gui.animation|
+
+Tool for animating a series of raster and vector maps or a space time
+raster or vector dataset.
+
+g.gui.dbmgr|
+
+Launches graphical attribute table manager.
+
+g.gui.gcp|
+
+Georectifies a map and allows to manage Ground Control Points.
+
+g.gui.gmodeler|
+
+\#\% label: Graphical Modeler.
+
+g.gui.iclass|
+
+\#\% label: Tool for supervised classification of imagery data.
+
+g.gui.mapswipe|
+
+Interactively compares two maps by swiping a visibility bar.
+
+g.gui.psmap|
+
+Tool for creating hardcopy map outputs.
+
+g.gui.rlisetup|
+
+Configuration tool for r.li modules.
+
+g.gui.timeline|
+
+Allows to compare temporal datasets by displaying their temporal extents
+in a plot.
+
+g.gui.vdigit|
+
+Interactive editing and digitization of vector maps.
+
+g.manual|
+
+Displays the manual pages of GRASS modules.
+
+i.colors.enhance|
+
+Performs auto-balancing of colors for RGB images.
+
+i.fusion.hpf|i.image.mosaic|
+
+Mosaics several images and extends colormap.
+
+i.in.spotvgt|
+
+Imports SPOT VGT NDVI data into a raster map.
+
+i.oif|i.pansharpen|i.spectral|i.tasscap|m.proj|
+
+Converts coordinates from one projection to another (cs2cs frontend).
+
+r.blend|
+
+Blends color components of two raster maps by a given ratio.
+
+r.buffer.lowmem|
+
+\#\% label: Creates a raster map showing buffer zones surrounding
+cells that contain non-NULL category values.
+
+r.colors.stddev|
+
+Sets color rules based on stddev from a raster map's mean value.
+
+r.fillnulls|
+
+Fills no-data areas in raster maps using spline interpolation.
+
+r.grow|r.in.aster|r.in.srtm|r.in.wms|
+
+Downloads and imports data from WMS/WMTS/NASA OnEarth server.
+
+r.mask|
+
+Creates a MASK for limiting raster operation.
+
+r.out.xyz|
+
+Exports a raster map to a text file as x,y,z values based on cell
+centers.
+
+r.pack|
+
+Packs up a raster map and support files for copying.
+
+r.plane|
+
+Creates raster plane map given dip (inclination), aspect (azimuth)
+and one point.
+
+r.reclass.area|
+
+Reclasses a raster map greater or less than user specified area size
+(in hectares).
+
+r.rgb|
+
+Splits a raster map into red, green and blue maps.
+
+r.tileset|
+
+Produces tilings of the source projection for use in the destination
+region and projection.
+
+r.unpack|
+
+Unpacks a raster map packed with r.pack.
+
+r3.in.xyz|t.create|
+
+Creates a space time dataset.
+
+t.info|
+
+Lists information about space time datasets and maps.
+
+t.list|
+
+Lists space time datasets and maps registered in the temporal database.
+
+t.merge|
+
+Merges several space time datasets into a single space time dataset.
+
+t.rast.accdetect|
+
+Detects accumulation patterns in temporally accumulated space time
+raster datasets created by t.rast.accumulate.
+
+t.rast.accumulate|
+
+Computes cyclic accumulations of a space time raster dataset.
+
+t.rast.aggregate|
+
+Aggregates temporally the maps of a space time raster dataset by a
+user defined granularity.
+
+t.rast.aggregate.ds|
+
+Aggregates data of an existing space time raster dataset using the
+time intervals of a second space time dataset.
+
+t.rast.colors|
+
+Creates/modifies the color table associated with each raster map of
+the space time raster dataset.
+
+t.rast.export|
+
+Exports space time raster dataset.
+
+t.rast.extract|
+
+Extracts a subset of a space time raster datasets.
+
+t.rast.gapfill|
+
+Replaces gaps in a space time raster dataset with interpolated raster
+maps.
+
+t.rast.import|
+
+Imports space time raster dataset.
+
+t.rast.list|
+
+Lists registered maps of a space time raster dataset.
+
+t.rast.mapcalc|
+
+Performs spatio-temporal mapcalc expressions on temporally sampled
+maps of space time raster datasets.
+
+t.rast.neighbors|
+
+Performs a neighborhood analysis for each map in a space time raster
+dataset.
+
+t.rast.out.vtk|
+
+Exports space time raster dataset as VTK time series.
+
+t.rast.series|
+
+Performs different aggregation algorithms from r.series on all or
+a subset of raster maps in a space time raster dataset.
+
+t.rast.to.rast3|
+
+Converts a space time raster dataset into a raster3d map.
+
+t.rast.univar|
+
+Calculates univariate statistics from the non-null cells for each
+registered raster map of a space time raster dataset.
+
+t.rast3d.extract|
+
+Extracts a subset of a space time 3D raster dataset.
+
+t.rast3d.list|
+
+Lists registered maps of a space time raster3d dataset.
+
+t.rast3d.mapcalc|
+
+Performs r3.mapcalc expressions on maps of sampled space time 3D raster
+datasets.
+
+t.rast3d.univar|
+
+Calculates univariate statistics from the non-null cells for each
+registered raster3d map of a space time raster3d dataset.
+
+t.register|
+
+Registers raster, vector and raster3d maps in a space time datasets.
+
+t.remove|
+
+Removes space time datasets from temporal database.
+
+t.rename|
+
+Renames a space time dataset
+
+t.sample|
+
+Samples the input space time dataset(s) with a sample space time dataset
+and print the result to stdout.
+
+t.shift|
+
+Shifts temporally the maps of a space time dataset.
+
+t.snap|
+
+Snaps temporally the maps of a space time dataset.
+
+t.support|
+
+Modifies the metadata of a space time dataset.
+
+t.topology|
+
+Lists temporal topology of a space time dataset.
+
+t.unregister|
+
+Unregisters raster, vector and raster3d maps from the temporal database
+or a specific space time dataset.
+
+t.vect.db.select|
+
+Prints attributes of vector maps registered in a space time vector
+dataset.
+
+t.vect.export|
+
+Exports a space time vector dataset as GRASS GIS specific archive
+file.
+
+t.vect.extract|
+
+Extracts a subset of a space time vector dataset.
+
+t.vect.import|
+
+Imports a space time vector dataset from a GRASS GIS specific archive
+file.
+
+t.vect.list|
+
+Lists registered maps of a space time vector dataset.
+
+t.vect.observe.strds|
+
+Observes specific locations in a space time raster dataset over a
+period of time using vector points.
+
+t.vect.univar|
+
+Calculates univariate statistics of attributes for each registered
+vector map of a space time vector dataset
+
+t.vect.what.strds|
+
+Stores raster map values at spatial and temporal positions of vector
+points as vector attributes.
+
+v.build.all|
+
+Rebuilds topology on all vector maps in the current mapset.
+
+v.centroids|v.class.ml|v.convert.all|
+
+Converts all older versions of GRASS vector maps in current mapset
+to current format.
+
+v.db.addcolumn|
+
+Adds one or more columns to the attribute table connected to a given
+vector map.
+
+v.db.addtable|
+
+Creates and connects a new attribute table to a given layer of an
+existing vector map.
+
+v.db.dropcolumn|
+
+Drops a column from the attribute table connected to a given vector
+map.
+
+v.db.droprow|
+
+Removes a vector feature from a vector map through attribute selection.
+
+v.db.droptable|v.db.join|
+
+Joins a database table to a vector map table.
+
+v.db.reconnect.all|
+
+Reconnects attribute tables for all vector maps from the current mapset
+to a new database.
+
+v.db.renamecolumn|
+
+Renames a column in the attribute table connected to a given vector
+map.
+
+v.db.univar|
+
+Calculates univariate statistics on selected table column for a GRASS
+vector map.
+
+v.db.update|
+
+Updates a column in the attribute table connected to a vector map.
+
+v.dissolve|
+
+Dissolves boundaries between adjacent areas sharing a common category
+number or attribute.
+
+v.in.e00|
+
+Imports E00 file into a vector map.
+
+v.in.geonames|
+
+Imports geonames.org country files into a vector points map.
+
+v.in.gns|
+
+Imports US-NGA GEOnet Names Server (GNS) country files into a GRASS
+vector points map.
+
+v.in.lines|
+
+Imports ASCII x,y{[},z{]} coordinates as a series of lines.
+
+v.in.mapgen|
+
+Imports Mapgen or Matlab-ASCII vector maps into GRASS.
+
+v.in.wfs|v.krige|
+
+Performs ordinary or block kriging for vector maps.
+
+v.out.gps|v.pack|
+
+Packs up a vector map and support files for copying.
+
+v.rast.stats|
+
+Calculates univariate statistics from a raster map based on a vector
+map and uploads statistics to new attribute columns.
+
+v.report|
+
+Reports geometry statistics for vector maps.
+
+v.to.lines|
+
+Converts vector polygons or points to lines.
+
+v.unpack|
+
+Unpacks a vector map packed with v.pack.
+
+v.what.vect|
+
+Uploads vector values at positions of vector points to the table.
+
+wxpyimgview|
+
+Views BMP images from the PNG driver.

@@ -1,0 +1,55 @@
+\appendix
+
+\section{How did I get this?}
+\begin{fullwidth}
+\begin{lstlisting}[basicstyle={\tiny\ttfamily},language=bash,tabsize=4]
+11970  [ 12:59:19 11.Nov.14 ] cat grass-gis_variables | tr '\n' '|' | sed 's/|/", "/g'
+12005  [ 16:01:14 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed -e /\n//
+12006  [ 16:01:18 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed -e '/\n//'
+12007  [ 16:01:21 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed e '/\n//'
+12008  [ 16:01:26 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed  's/\n//'
+
+12012  [ 16:01:42 11.Nov.14 ] man sed
+12014  [ 16:04:24 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d'
+12015  [ 16:04:32 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^v.'
+12016  [ 16:04:41 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^v.' > grassgis_modules_vector
+12017  [ 16:04:48 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^r.' > grassgis_modules_raster
+12018  [ 16:04:57 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^g.' > grassgis_modules_general
+12019  [ 16:05:18 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^i.' > grassgis_modules_imagery
+12020  [ 16:05:26 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^db.' > grassgis_modules_db
+12021  [ 16:05:34 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^t.' > grassgis_modules_temporal
+12022  [ 16:05:42 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^d.' > grassgis_modules_display
+12023  [ 16:05:55 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^m.' > grassgis_modules_miscellaneous
+12024  [ 16:06:06 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^ps.' > grassgis_modules_postscript
+12025  [ 16:06:22 11.Nov.14 ] cat grassgis_modules |cut -d" " -f1 |sed '/^\s*$/d' |grep '^r3.' > grassgis_modules_raster3d
+
+12256  [ 11:03:14 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module\n'//g'; done
+12257  [ 11:03:45 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/module\n//g'; done
+12258  [ 11:03:49 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/module//g'; done
+12259  [ 11:04:06 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module\n//g'; done
+12260  [ 11:04:11 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module\\n//g'; done
+12261  [ 11:04:16 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module //g'; done
+12262  [ 11:04:18 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g'; done
+12263  [ 11:04:46 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description//g'; done
+12264  [ 11:04:57 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: \n//g'; done
+12265  [ 11:05:09 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: //g' |cut -d "\n"; done
+12266  [ 11:05:16 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: //g' |tr -d "\n"; done
+12267  [ 11:05:26 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: //g' |tr "\n" ""; done
+12268  [ 11:05:31 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: //g' |tr "\n" " "; done
+12269  [ 11:05:37 14.Nov.14 ] for D in *; do grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: //g'; done
+
+12270  [ 11:06:13 14.Nov.14 ] for D in *; do echo ${D} && grep -A1 '#%module' ${D} | sed 's/#%module//g' |sed 's/#% description: //g'; done
+12271  [ 11:06:39 14.Nov.14 ] for D in *; do echo ${D} && grep -A1 '#%module' ${D} | tr "\n" " " |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12272  [ 11:06:49 14.Nov.14 ] for D in *; do echo ${D} && grep -A1 '#%module' ${D} | tr "\n" "p " |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12273  [ 11:06:56 14.Nov.14 ] for D in *; do echo ${D} && grep -A1 '#%module' ${D} | tr "\n" "\n" |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12274  [ 11:07:04 14.Nov.14 ] for D in *; do echo ${D} && grep -A1 '#%module' ${D} | tr "\n" "_" |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12275  [ 11:07:25 14.Nov.14 ] for D in *; do echo ${D} && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12276  [ 11:07:50 14.Nov.14 ] for D in *; do echo "${D}" |tr "\n" " " && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12277  [ 11:08:17 14.Nov.14 ] for D in *; do echo "${D}" |tr "\n" "|" |tr "\n" " " && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12278  [ 11:08:36 14.Nov.14 ] for D in *; do echo "${D}" |tr "\n" "|" |tr -d "\n" && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12279  [ 11:09:01 14.Nov.14 ] for D in *; do echo "${D}" |tr -d "\n" && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12280  [ 11:09:14 14.Nov.14 ] for D in *; do echo "${D}" |tr -d "\n" "|" && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+12281  [ 11:09:17 14.Nov.14 ] for D in *; do echo "${D}" |tr "\n" "|" && grep -A1 '#%module' ${D} |sed 's/#%module//g' |sed 's/#% description: //g'; done
+\end{lstlisting}
+\end{fullwidth}
+

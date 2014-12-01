@@ -208,11 +208,11 @@ logicalmkup
 \begin_body
 
 \begin_layout Subsection
-A grassgis 
+A 
 \emph on
-language
+grassgis
 \emph default
- definition for the 
+ language definition for the 
 \begin_inset Flex Code
 status open
 
@@ -226,6 +226,10 @@ listings
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "basicstyle={\scriptsize\ttfamily},language={[LaTeX]TeX},numbers=left,numberstyle={\tiny},tabsize=4"
 inline false
@@ -821,6 +825,35 @@ upquote=true
 
 }% see: <http://tex.stackexchange.com/a/145868/8272>
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/nik/archive/LyX/grassy-listing/listings/grassy_definitions.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Experimenting with settings for the listings packages
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/nik/archive/LyX/grassy-listing/listings/grassy_lstset.tex"
 
 \end_inset
 
