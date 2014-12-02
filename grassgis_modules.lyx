@@ -136,15 +136,7 @@ logicalmkup
 \begin_body
 
 \begin_layout Title
-GRASS
-\begin_inset space \thinspace{}
-\end_inset
-
--
-\begin_inset space \thinspace{}
-\end_inset
-
-GIS Modules & Variables
+grassy Listing
 \end_layout
 
 \begin_layout Address
@@ -334,8 +326,10 @@ target "http://grass.osgeo.org/grass70/manuals/full_index.html"
 \end_inset
 
 
+\series bold
 \noun on
 This reference list describes
+\series default
 \noun default
  the modules distributed with GRASS.
  As well, it experiments with LaTeX' 
@@ -364,6 +358,21 @@ target "ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.p
 \end_inset
 
 GIS code.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+This work is licensed under the Creative Commons Attribution 4.0 International
+ License.
+ To view a copy of this license, visit 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://creativecommons.org/licenses/by/4.0/"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
