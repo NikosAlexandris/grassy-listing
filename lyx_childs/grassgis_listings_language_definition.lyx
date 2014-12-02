@@ -209,9 +209,15 @@ logicalmkup
 
 \begin_layout Subsection
 A 
-\emph on
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 grassgis
-\emph default
+\end_layout
+
+\end_inset
+
  language definition for the 
 \begin_inset Flex Code
 status open
@@ -222,7 +228,7 @@ listings
 
 \end_inset
 
- packages
+ package
 \end_layout
 
 \begin_layout Standard
@@ -847,7 +853,17 @@ filename "/home/nik/archive/LyX/grassy-listing/listings/grassy_definitions.tex"
 \end_layout
 
 \begin_layout Subsection
-Experimenting with settings for the listings packages
+Experimenting with settings for the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+listings
+\end_layout
+
+\end_inset
+
+ package
 \end_layout
 
 \begin_layout Standard
